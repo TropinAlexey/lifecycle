@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dapper;
-using Pitstop.NotificationService.Model;
+using BWMS.NotificationService.Model;
 using Polly;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using Serilog;
 
-namespace Pitstop.NotificationService.Repositories
+namespace BWMS.NotificationService.Repositories
 {
     public class SqlServerNotificationRepository : INotificationRepository
     {

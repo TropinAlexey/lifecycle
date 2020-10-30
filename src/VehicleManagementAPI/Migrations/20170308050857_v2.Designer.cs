@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Pitstop.Application.VehicleManagement.DataAccess;
+using BWMS.Application.VehicleManagement.DataAccess;
 
-namespace Pitstop.Application.VehicleManagement.Migrations
+namespace BWMS.Application.VehicleManagement.Migrations
 {
     [DbContext(typeof(VehicleManagementDBContext))]
     [Migration("20170308050857_v2")]
@@ -16,7 +16,7 @@ namespace Pitstop.Application.VehicleManagement.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
 
-            modelBuilder.Entity("Pitstop.Application.VehicleManagement.Model.Vehicle", b =>
+            modelBuilder.Entity("BWMS.Application.VehicleManagement.Model.Vehicle", b =>
                 {
                     b.Property<string>("Name")
                         .ValueGeneratedOnAdd();

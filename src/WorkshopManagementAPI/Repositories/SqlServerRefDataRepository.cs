@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dapper;
-using Pitstop.WorkshopManagementAPI.Repositories.Model;
+using BWMS.WorkshopManagementAPI.Repositories.Model;
 using System.Data.SqlClient;
 using System.Runtime.ExceptionServices;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories
+namespace BWMS.WorkshopManagementAPI.Repositories
 {
     public class SqlServerRefDataRepository : IVehicleRepository, ICustomerRepository
     {

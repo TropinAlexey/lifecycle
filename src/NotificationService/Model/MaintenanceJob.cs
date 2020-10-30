@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.NotificationService.Model
+namespace BWMS.NotificationService.Model
 {
     public class MaintenanceJob
     {

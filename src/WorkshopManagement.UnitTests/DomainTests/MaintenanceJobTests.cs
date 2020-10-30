@@ -1,8 +1,8 @@
 using System;
 using Xunit;
 using WorkshopManagement.UnitTests.TestdataBuilders;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
 namespace WorkshopManagement.UnitTests.DomainTests
 {

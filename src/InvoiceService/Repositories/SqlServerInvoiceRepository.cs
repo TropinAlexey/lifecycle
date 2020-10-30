@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dapper;
-using Pitstop.InvoiceService.Model;
+using BWMS.InvoiceService.Model;
 using Polly;
 using System.Data.SqlClient;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Transactions;
 using System.Linq;
 using Serilog;
 
-namespace Pitstop.InvoiceService.Repositories
+namespace BWMS.InvoiceService.Repositories
 {
     public class SqlServerInvoiceRepository : IInvoiceRepository
     {

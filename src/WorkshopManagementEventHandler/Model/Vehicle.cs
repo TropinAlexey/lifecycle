@@ -1,4 +1,4 @@
-﻿namespace Pitstop.WorkshopManagementEventHandler.Model
+﻿namespace BWMS.WorkshopManagementEventHandler.Model
 {
     public class Vehicle
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pitstop.WorkshopManagementEventHandler.Model;
+using BWMS.WorkshopManagementEventHandler.Model;
 
-namespace Pitstop.WorkshopManagementEventHandler.DataAccess
+namespace BWMS.WorkshopManagementEventHandler.DataAccess
 {
     public class WorkshopManagementDBContext : DbContext
     {

@@ -1,14 +1,14 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Pitstop.UITest.PageModel.Pages.VehicleManagement
+namespace BWMS.UITest.PageModel.Pages.VehicleManagement
 {
     /// <summary>
     /// Represents the RegisterVehicle page.
     /// </summary>
-    public class RegisterVehiclePage : PitstopPage
+    public class RegisterVehiclePage : MainPage
     {
-        public RegisterVehiclePage(PitstopApp pitstop) : base("Vehicle Management - register vehicle", pitstop)
+        public RegisterVehiclePage(App app) : base("What is your bike? Register it", app)
         {
         }
 
@@ -25,13 +25,13 @@ namespace Pitstop.UITest.PageModel.Pages.VehicleManagement
         public VehicleManagementPage Submit()
         {
             WebDriver.FindElement(By.Id("SubmitButton")).Click();
-            return new VehicleManagementPage(Pitstop);
+            return new VehicleManagementPage(app);
         }
 
         public VehicleManagementPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new VehicleManagementPage(Pitstop);
+            return new VehicleManagementPage(app);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Pitstop.Application.VehicleManagement.Model
+﻿namespace BWMS.Application.VehicleManagement.Model
 {
     public class Vehicle
     {

@@ -1,10 +1,10 @@
 using System;
 using Xunit;
 using Xunit.Abstractions;
-using Pitstop.UITest.PageModel;
+using BWMS.UITest.PageModel;
 using TestUtils;
 
-namespace Pitstop.UITest
+namespace BWMS.UITest
 {
     public class ScenarioTests
     {
@@ -20,12 +20,12 @@ namespace Pitstop.UITest
         {
             // arrange
             string testrunId = Guid.NewGuid().ToString("N");
-            PitstopApp pitstop = new PitstopApp(testrunId, TestConstants.PitstopStartUrl);
-            var homePage = pitstop.Start();
+            App app = new App(testrunId, TestConstants.BWMSStartUrl);
+            var homePage = BWMS.Start();
             string Name = TestDataGenerators.GenerateRandomName();
 
             // act
-            pitstop.Menu
+            BWMS.Menu
                 .CustomerManagement()
                 .RegisterCustomer()
                 .Cancel()
@@ -37,7 +37,7 @@ namespace Pitstop.UITest
                 .SelectCustomer($"TestCustomer {testrunId}")
                 .Back();
 
-            pitstop.Menu
+            BWMS.Menu
                 .VehicleManagement()
                 .RegisterVehicle()
                 .Cancel()
@@ -47,7 +47,7 @@ namespace Pitstop.UITest
                 .SelectVehicle(Name)
                 .Back(); 
 
-            pitstop.Menu
+            BWMS.Menu
                 .WorkshopManagement()
                 .RegisterMaintenanceJob()
                 .Cancel()
@@ -57,7 +57,7 @@ namespace Pitstop.UITest
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .Back(); 
 
-            pitstop.Menu
+            BWMS.Menu
                 .WorkshopManagement()
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .GetJobStatus(out string beforeJobStatus)
@@ -72,7 +72,7 @@ namespace Pitstop.UITest
             Assert.Equal("Completed", afterJobStatus);
 
             // cleanup
-            pitstop.Stop();
+            BWMS.Stop();
         }
     }
 }

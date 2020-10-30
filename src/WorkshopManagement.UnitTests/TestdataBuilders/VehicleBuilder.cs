@@ -1,7 +1,7 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
 using TestUtils;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
 namespace WorkshopManagement.UnitTests.TestdataBuilders
 {

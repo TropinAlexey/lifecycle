@@ -9,9 +9,9 @@ using Pitstop.UITest.PageModel.Pages;
 namespace Pitstop.UITest.PageModel
 {
     /// <summary>
-    /// Represents the Pitstop web-application.
+    /// Represents the BWMS web-application.
     /// </summary>
-    public class PitstopApp : IDisposable
+    public class App : IDisposable
     {
         private bool _disposed = false;
         private readonly IWebDriver _webDriver;
@@ -36,11 +36,11 @@ namespace Pitstop.UITest.PageModel
 
 
         /// <summary>
-        /// Initialize a new Pitstop instance.
+        /// Initialize a new BWMS instance.
         /// </summary>
         /// <param name="testrunId">The unique test-run Id.</param>
         /// <param name="startUrl">The Url to start.</param>
-        public PitstopApp(string testrunId, Uri startUrl)
+        public App(string testrunId, Uri startUrl)
         {
             string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             ChromeOptions options = new ChromeOptions();
@@ -52,7 +52,7 @@ namespace Pitstop.UITest.PageModel
         }
 
         /// <summary>
-        /// Open the Pitstop application.
+        /// Open the BWMS application.
         /// </summary>
         /// <returns>An initialized <see cref="CustomerSearchPage"/> instance.</returns>
         public HomePage Start()
@@ -80,10 +80,10 @@ namespace Pitstop.UITest.PageModel
         }
 
         /// <summary>
-        /// Create a new Pitstop page.
+        /// Create a new BWMS page.
         /// </summary>
         /// <typeparam name="T">The type of the page to create.</typeparam>
-        public T CreatePage<T>() where T : PitstopPage
+        public T CreatePage<T>() where T : MainPage
         {
             return Activator.CreateInstance(typeof(T), new object[] { this }) as T;
         }

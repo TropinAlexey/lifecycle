@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pitstop.WorkshopManagementAPI.Repositories;
+using BWMS.WorkshopManagementAPI.Repositories;
 
-namespace Pitstop.WorkshopManagementAPI.Controllers
+namespace BWMS.WorkshopManagementAPI.Controllers
 {
     [Route("/api/[controller]")]
     public class RefDataController : Controller

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories.Model
+namespace BWMS.WorkshopManagementAPI.Repositories.Model
 {
     public class Vehicle
     {

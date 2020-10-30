@@ -1,8 +1,8 @@
 using System;
-using Pitstop.ViewModels;
+using BWMS.ViewModels;
 using WebApp.Commands;
 
-namespace Pitstop.WebApp.Mappers
+namespace BWMS.WebApp.Mappers
 {
     public static class Mappers
     {

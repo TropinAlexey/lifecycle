@@ -1,6 +1,6 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 using Xunit;
 
 namespace WorkshopManagement.UnitTests.DomainTests

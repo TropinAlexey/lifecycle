@@ -1,10 +1,10 @@
-﻿using Pitstop.Application.VehicleManagement.Commands;
-using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Application.VehicleManagement.Commands;
+using BWMS.Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.Application.VehicleManagement.Events
+namespace BWMS.Application.VehicleManagement.Events
 {
     public class VehicleRegistered : Event
     {

@@ -1,17 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementEventHandler.DataAccess;
-using Pitstop.WorkshopManagementEventHandler.Events;
-using Pitstop.WorkshopManagementEventHandler.Model;
+using BWMS.Infrastructure.Messaging;
+using BWMS.WorkshopManagementEventHandler.DataAccess;
+using BWMS.WorkshopManagementEventHandler.Events;
+using BWMS.WorkshopManagementEventHandler.Model;
 using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementEventHandler
+namespace BWMS.WorkshopManagementEventHandler
 {
     public class EventHandler : IHostedService, IMessageHandlerCallback
     {

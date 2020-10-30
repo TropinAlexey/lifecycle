@@ -1,16 +1,16 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pitstop.Application.VehicleManagement.Model;
-using Pitstop.Application.VehicleManagement.DataAccess;
+using BWMS.Application.VehicleManagement.Model;
+using BWMS.Application.VehicleManagement.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.Application.VehicleManagement.Events;
-using Pitstop.Application.VehicleManagement.Commands;
-using Pitstop.VehicleManagementAPI.Mappers;
+using BWMS.Infrastructure.Messaging;
+using BWMS.Application.VehicleManagement.Events;
+using BWMS.Application.VehicleManagement.Commands;
+using BWMS.VehicleManagementAPI.Mappers;
 using System.Text.RegularExpressions;
 
-namespace Pitstop.Application.VehicleManagement.Controllers
+namespace BWMS.Application.VehicleManagement.Controllers
 {
 
     [Route("/api/[controller]")]

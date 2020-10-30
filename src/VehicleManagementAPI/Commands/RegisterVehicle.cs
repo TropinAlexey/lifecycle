@@ -1,9 +1,9 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.Application.VehicleManagement.Commands
+namespace BWMS.Application.VehicleManagement.Commands
 {
     public class RegisterVehicle : Command
     {

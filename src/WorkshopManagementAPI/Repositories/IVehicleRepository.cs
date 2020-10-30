@@ -1,10 +1,10 @@
-﻿using Pitstop.WorkshopManagementAPI.Repositories.Model;
+﻿using BWMS.WorkshopManagementAPI.Repositories.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories
+namespace BWMS.WorkshopManagementAPI.Repositories
 {
     public interface IVehicleRepository
     {
