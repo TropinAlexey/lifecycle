@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using BWMS.CustomerManagementAPI.DataAccess;
 using BWMS.CustomerManagementAPI.Model;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using BWMS.CustomerManagementAPI.Events;
 using BWMS.CustomerManagementAPI.Commands;
 using BWMS.CustomerManagementAPI.Mappers;

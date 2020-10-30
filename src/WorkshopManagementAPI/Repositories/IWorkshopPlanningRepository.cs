@@ -1,4 +1,4 @@
-﻿using BWMS.Infrastructure.Messaging;
+﻿using Pitstop.Infrastructure.Messaging;
 using BWMS.WorkshopManagementAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;

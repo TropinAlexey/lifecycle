@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using BWMS.NotificationService.Events;
 using BWMS.NotificationService.Model;
 using BWMS.NotificationService.NotificationChannels;

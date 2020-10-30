@@ -6,11 +6,11 @@ using Newtonsoft.Json.Serialization;
 using Dapper;
 using Polly;
 using BWMS.WorkshopManagementAPI.Repositories.Model;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Converters;
 using System.Data.SqlClient;
-using PitBWMSstop.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
 
 namespace BWMS.WorkshopManagementAPI.Repositories
 {

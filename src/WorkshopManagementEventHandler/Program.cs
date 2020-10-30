@@ -2,8 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using BWMS.Infrastructure.Messaging;
-using BWMS.Infrastructure.Messaging.Configuration;
+using Pitstop.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging.Configuration;
 using BWMS.WorkshopManagementEventHandler.DataAccess;
 using Polly;
 using Serilog;

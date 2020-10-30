@@ -1,4 +1,4 @@
-﻿using BWMS.Infrastructure.Messaging;
+﻿using Pitstop.Infrastructure.Messaging;
 using BWMS.WorkshopManagementAPI.Commands;
 using BWMS.WorkshopManagementAPI.Domain.BusinessRules;
 using BWMS.WorkshopManagementAPI.Domain.Core;

@@ -9,7 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />  
     <PackageReference Include="Microsoft.AspNetCore.HealthChecks" Version="1.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
-    <PackageReference Include="BWMS.Infrastructure.Messaging" Version="2.7.1" />
+    <PackageReference Include="Pitstop.Infrastructure.Messaging" Version="2.7.1" />
     <PackageReference Include="Polly" Version="7.2.1" />
     <PackageReference Include="Refit" Version="5.1.67" />
     <PackageReference Include="Refit.HttpClientFactory" Version="5.1.67" />

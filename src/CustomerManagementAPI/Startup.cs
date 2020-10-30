@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using BWMS.CustomerManagementAPI.DataAccess;
-using BWMS.Infrastructure.Messaging.Configuration;
+using Pitstop.Infrastructure.Messaging.Configuration;
 using System;
 using Serilog;
 using Microsoft.Extensions.HealthChecks;
