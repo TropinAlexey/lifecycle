@@ -20,7 +20,7 @@ namespace Pitstop.WebApp.Mappers
 
         public static RegisterVehicle MapToRegisterVehicle(this VehicleManagementNewViewModel source) => new RegisterVehicle(
             Guid.NewGuid(),
-            source.Vehicle.LicenseNumber,
+            source.Vehicle.Name,
             source.Vehicle.Brand,
             source.Vehicle.Type,
             source.SelectedCustomerId

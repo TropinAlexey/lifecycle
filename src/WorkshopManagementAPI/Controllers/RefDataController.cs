@@ -43,10 +43,10 @@ namespace Pitstop.WorkshopManagementAPI.Controllers
         }
 
         [HttpGet]
-        [Route("vehicles/{licenseNumber}")]
-        public async Task<IActionResult> GetVehicleByLicenseNumber(string licenseNumber)
+        [Route("vehicles/{Name}")]
+        public async Task<IActionResult> GetVehicleByName(string Name)
         {
-            var vehicle = await _vehicleRepo.GetVehicleAsync(licenseNumber);
+            var vehicle = await _vehicleRepo.GetVehicleAsync(Name);
             if (vehicle == null)
             {
                 return NotFound();

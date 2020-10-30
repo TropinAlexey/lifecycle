@@ -8,15 +8,15 @@ namespace Pitstop.Application.VehicleManagement.Events
 {
     public class VehicleRegistered : Event
     {
-        public readonly string LicenseNumber;
+        public readonly string Name;
         public readonly string Brand;
         public readonly string Type;
         public readonly string OwnerId;
 
-        public VehicleRegistered(Guid messageId, string licenseNumber, string brand, string type, string ownerId) : 
+        public VehicleRegistered(Guid messageId, string Name, string brand, string type, string ownerId) : 
             base(messageId)
         {
-            LicenseNumber = licenseNumber;
+            Name = Name;
             Brand = brand;
             Type = type;
             OwnerId = ownerId;
@@ -26,7 +26,7 @@ namespace Pitstop.Application.VehicleManagement.Events
         {
             return new VehicleRegistered(
                 Guid.NewGuid(),
-                command.LicenseNumber,
+                command.Name,
                 command.Brand,
                 command.Type,
                 command.OwnerId

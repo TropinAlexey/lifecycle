@@ -34,6 +34,6 @@ namespace WebApp.RESTClients
         Task<List<Vehicle>> GetVehicles();
 
         [Get("/refdata/vehicles/{id}")]
-        Task<Vehicle> GetVehicleByLicenseNumber([AliasAs("id")] string licenseNumber);
+        Task<Vehicle> GetVehicleByName([AliasAs("id")] string Name);
     }
 }

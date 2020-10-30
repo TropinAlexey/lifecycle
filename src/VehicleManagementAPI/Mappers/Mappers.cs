@@ -7,7 +7,7 @@ namespace Pitstop.VehicleManagementAPI.Mappers
     {
         public static Vehicle MapToVehicle(this RegisterVehicle command) => new Vehicle
         {
-            LicenseNumber = command.LicenseNumber,
+            Name = command.Name,
             Brand = command.Brand,
             Type = command.Type,
             OwnerId = command.OwnerId

@@ -17,7 +17,7 @@ namespace Pitstop.Application.VehicleManagement.Migrations
 
             modelBuilder.Entity("Pitstop.Application.VehicleManagement.Model.Vehicle", b =>
                 {
-                    b.Property<string>("LicenseNumber")
+                    b.Property<string>("Name")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Brand");
@@ -26,7 +26,7 @@ namespace Pitstop.Application.VehicleManagement.Migrations
 
                     b.Property<string>("Type");
 
-                    b.HasKey("LicenseNumber");
+                    b.HasKey("Name");
 
                     b.ToTable("Vehicle");
                 });

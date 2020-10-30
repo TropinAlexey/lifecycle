@@ -24,7 +24,7 @@ namespace Pitstop.WorkshopManagementAPI.Domain.BusinessRules
         public static void NumberOfParallelMaintenanceJobsOnAVehicleMustNotExceedOne(
             this WorkshopPlanning planning, PlanMaintenanceJob command)
         {
-            if (planning.Jobs.Any(j => j.Vehicle.Id == command.VehicleInfo.LicenseNumber &&
+            if (planning.Jobs.Any(j => j.Vehicle.Id == command.VehicleInfo.Name &&
                     j.PlannedTimeslot.OverlapsWith(command.StartTime, command.EndTime)))
             {
                 throw new BusinessRuleViolationException($"Only 1 maintenance job can be executed on a vehicle during a certain time-slot.");

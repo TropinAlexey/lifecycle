@@ -56,7 +56,7 @@ namespace Pitstop.InvoiceService.Repositories
                       "IF OBJECT_ID('MaintenanceJob') IS NULL " +
                       "CREATE TABLE MaintenanceJob (" +
                       "  JobId varchar(50) NOT NULL," +
-                      "  LicenseNumber varchar(50) NOT NULL," +
+                      "  Name varchar(50) NOT NULL," +
                       "  CustomerId varchar(50) NOT NULL," +
                       "  Description varchar(250) NOT NULL," +
                       "  StartTime datetime2 NULL," +
@@ -93,8 +93,8 @@ namespace Pitstop.InvoiceService.Repositories
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 string sql =
-                    "insert into MaintenanceJob(JobId, LicenseNumber, CustomerId, Description, Finished, InvoiceSent) " +
-                    "values(@JobId, @LicenseNumber, @CustomerId, @Description, 0, 0);";
+                    "insert into MaintenanceJob(JobId, Name, CustomerId, Description, Finished, InvoiceSent) " +
+                    "values(@JobId, @Name, @CustomerId, @Description, 0, 0);";
                 await conn.ExecuteAsync(sql, job);
             }
         }

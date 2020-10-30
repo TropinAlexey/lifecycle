@@ -33,10 +33,10 @@ namespace Pitstop.Application.VehicleManagement.Controllers
         }
 
         [HttpGet]
-        [Route("{licenseNumber}", Name = "GetByLicenseNumber")]
-        public async Task<IActionResult> GetByLicenseNumber(string licenseNumber)
+        [Route("{Name}", Name = "GetByName")]
+        public async Task<IActionResult> GetByName(string Name)
         {
-            var vehicle = await _dbContext.Vehicles.FirstOrDefaultAsync(v => v.LicenseNumber == licenseNumber);
+            var vehicle = await _dbContext.Vehicles.FirstOrDefaultAsync(v => v.Name == Name);
             if (vehicle == null)
             {
                 return NotFound();
@@ -52,9 +52,9 @@ namespace Pitstop.Application.VehicleManagement.Controllers
                 if (ModelState.IsValid)
                 {
                     // check invariants
-                    if (!Regex.IsMatch(command.LicenseNumber, NUMBER_PATTERN, RegexOptions.IgnoreCase))
+                    if (!Regex.IsMatch(command.Name, NUMBER_PATTERN, RegexOptions.IgnoreCase))
                     {
-                        return BadRequest($"The specified license-number '{command.LicenseNumber}' was not in the correct format.");
+                        return BadRequest($"The specified license-number '{command.Name}' was not in the correct format.");
                     }
 
                     // insert vehicle
@@ -67,7 +67,7 @@ namespace Pitstop.Application.VehicleManagement.Controllers
                     await _messagePublisher.PublishMessageAsync(e.MessageType, e, "");
 
                     //return result
-                    return CreatedAtRoute("GetByLicenseNumber", new { licenseNumber = vehicle.LicenseNumber }, vehicle);
+                    return CreatedAtRoute("GetByName", new { Name = vehicle.Name }, vehicle);
                 }
                 return BadRequest();
             }

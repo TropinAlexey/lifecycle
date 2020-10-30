@@ -93,13 +93,13 @@ namespace Pitstop.NotificationService
             {
                 JobId = mjp.JobId.ToString(),
                 CustomerId = mjp.CustomerInfo.Id,
-                LicenseNumber = mjp.VehicleInfo.LicenseNumber,
+                Name = mjp.VehicleInfo.Name,
                 StartTime = mjp.StartTime,
                 Description = mjp.Description
             };
 
-            Log.Information("Register Maintenance Job: {Id}, {CustomerId}, {VehicleLicenseNumber}, {StartTime}, {Description}", 
-                job.JobId, job.CustomerId, job.LicenseNumber, job.StartTime, job.Description);
+            Log.Information("Register Maintenance Job: {Id}, {CustomerId}, {Name}, {StartTime}, {Description}", 
+                job.JobId, job.CustomerId, job.Name, job.StartTime, job.Description);
 
             await _repo.RegisterMaintenanceJobAsync(job);
         }
@@ -127,7 +127,7 @@ namespace Pitstop.NotificationService
                 foreach (MaintenanceJob job in jobsPerCustomer)
                 {
                     body.AppendLine($"- {job.StartTime.ToString("dd-MM-yyyy")} at {job.StartTime.ToString("HH:mm")} : " +
-                        $"{job.Description} on vehicle with license-number {job.LicenseNumber}");
+                        $"{job.Description} on vehicle with license-number {job.Name}");
                 }
 
                 body.AppendLine($"\nPlease make sure you're present at least 10 minutes before the (first) job is planned.");

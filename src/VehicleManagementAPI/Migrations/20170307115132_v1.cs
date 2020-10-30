@@ -12,7 +12,7 @@ namespace Pitstop.Application.VehicleManagement.Migrations
                 name: "Vehicle",
                 columns: table => new
                 {
-                    LicenseNumber = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Brand = table.Column<string>(nullable: true),
                     LastUpdateTimestamp = table.Column<DateTimeOffset>(nullable: false),
                     OwnerId = table.Column<string>(nullable: true),
@@ -20,7 +20,7 @@ namespace Pitstop.Application.VehicleManagement.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehicle", x => x.LicenseNumber);
+                    table.PrimaryKey("PK_Vehicle", x => x.Name);
                 });
         }
 

@@ -52,7 +52,7 @@ namespace Pitstop.WorkshopManagementAPI.Mappers
         public static VehicleDTO MapToDTO(this Vehicle source) =>
             new VehicleDTO
             {
-                LicenseNumber = source.Id.Value,
+                Name = source.Id.Value,
                 Brand = source.Brand,
                 Type = source.Type
             };

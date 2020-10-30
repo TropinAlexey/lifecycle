@@ -12,9 +12,9 @@ namespace Pitstop.UITest.PageModel.Pages.VehicleManagement
         {
         }
 
-        public RegisterVehiclePage FillVehicleDetails(string licenseNumber, string brand, string type, string owner)
+        public RegisterVehiclePage FillVehicleDetails(string Name, string brand, string type, string owner)
         {
-            WebDriver.FindElement(By.Name("Vehicle.LicenseNumber")).SendKeys(licenseNumber);
+            WebDriver.FindElement(By.Name("Vehicle.Name")).SendKeys(Name);
             WebDriver.FindElement(By.Name("Vehicle.Brand")).SendKeys(brand);
             WebDriver.FindElement(By.Name("Vehicle.Type")).SendKeys(type);
             SelectElement select = new SelectElement(WebDriver.FindElement(By.Id("SelectedCustomerId")));

@@ -48,7 +48,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
 
                     b.Property<DateTime>("StartTime");
 
-                    b.Property<string>("VehicleLicenseNumber");
+                    b.Property<string>("Name");
 
                     b.Property<DateTime>("WorkshopPlanningDate");
 
@@ -56,14 +56,14 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.HasIndex("VehicleLicenseNumber");
+                    b.HasIndex("Name");
 
                     b.ToTable("MaintenanceJob");
                 });
 
             modelBuilder.Entity("Pitstop.WorkshopManagementEventHandler.Model.Vehicle", b =>
                 {
-                    b.Property<string>("LicenseNumber")
+                    b.Property<string>("Name")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Brand");
@@ -72,7 +72,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
 
                     b.Property<string>("Type");
 
-                    b.HasKey("LicenseNumber");
+                    b.HasKey("Name");
 
                     b.ToTable("Vehicle");
                 });
@@ -85,7 +85,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
 
                     b.HasOne("Pitstop.WorkshopManagementEventHandler.Model.Vehicle", "Vehicle")
                         .WithMany()
-                        .HasForeignKey("VehicleLicenseNumber");
+                        .HasForeignKey("Name");
                 });
         }
     }

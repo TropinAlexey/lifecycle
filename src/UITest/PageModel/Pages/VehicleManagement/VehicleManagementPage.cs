@@ -18,10 +18,10 @@ namespace Pitstop.UITest.PageModel.Pages.VehicleManagement
             return new RegisterVehiclePage(Pitstop);
         }
 
-        public VehicleDetailsPage SelectVehicle(string licenseNumber)
+        public VehicleDetailsPage SelectVehicle(string Name)
         {
             WebDriver
-                .FindElement(By.XPath($"//td[contains(text(),'{licenseNumber}')]"))
+                .FindElement(By.XPath($"//td[contains(text(),'{Name}')]"))
                 .Click();
             return new VehicleDetailsPage(Pitstop); 
         }

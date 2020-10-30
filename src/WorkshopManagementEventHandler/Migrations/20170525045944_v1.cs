@@ -25,14 +25,14 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                 name: "Vehicle",
                 columns: table => new
                 {
-                    LicenseNumber = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Brand = table.Column<string>(nullable: true),
                     OwnerId = table.Column<string>(nullable: true),
                     Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehicle", x => x.LicenseNumber);
+                    table.PrimaryKey("PK_Vehicle", x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,7 +47,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                     EndTime = table.Column<DateTime>(nullable: false),
                     Notes = table.Column<string>(nullable: true),
                     StartTime = table.Column<DateTime>(nullable: false),
-                    VehicleLicenseNumber = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: true),
                     WorkshopPlanningDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -60,10 +60,10 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                         principalColumn: "CustomerId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_MaintenanceJob_Vehicle_VehicleLicenseNumber",
-                        column: x => x.VehicleLicenseNumber,
+                        name: "FK_MaintenanceJob_Vehicle_Name",
+                        column: x => x.Name,
                         principalTable: "Vehicle",
-                        principalColumn: "LicenseNumber",
+                        principalColumn: "Name",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -73,9 +73,9 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MaintenanceJob_VehicleLicenseNumber",
+                name: "IX_MaintenanceJob_Name",
                 table: "MaintenanceJob",
-                column: "VehicleLicenseNumber");
+                column: "Name");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

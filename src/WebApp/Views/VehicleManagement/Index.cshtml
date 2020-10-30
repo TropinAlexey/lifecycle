@@ -15,8 +15,8 @@
     <tbody>
         @foreach (var vehicle in Model.Vehicles)
         {
-            <tr class="clickable" onclick="location.href = '@(Url.Action("Details", "VehicleManagement", new { licenseNumber = vehicle.LicenseNumber }))'">
-                <td>@vehicle.LicenseNumber</td>
+            <tr class="clickable" onclick="location.href = '@(Url.Action("Details", "VehicleManagement", new { Name = vehicle.Name }))'">
+                <td>@vehicle.Name</td>
                 <td>@vehicle.Brand</td>
                 <td>@vehicle.Type</td>
             </tr>

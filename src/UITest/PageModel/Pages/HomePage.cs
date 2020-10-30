@@ -7,7 +7,7 @@ namespace Pitstop.UITest.PageModel.Pages
     /// </summary>
     public class HomePage : PitstopPage
     {
-        public HomePage(PitstopApp pitstop) : base("Pitstop - Garage Management System", pitstop)
+        public HomePage(PitstopApp pitstop) : base("Lifecycle - Bike Workshop Management System"", pitstop)
         {
         }
     }

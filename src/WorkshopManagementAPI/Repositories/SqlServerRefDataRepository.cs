@@ -63,14 +63,14 @@ namespace Pitstop.WorkshopManagementAPI.Repositories
             return vehicles;
         }
 
-        public async Task<Vehicle> GetVehicleAsync(string licenseNumber)
+        public async Task<Vehicle> GetVehicleAsync(string Name)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 try
                 {
-                    return await conn.QueryFirstOrDefaultAsync<Vehicle>("select * from Vehicle where LicenseNumber = @LicenseNumber",
-                        new { LicenseNumber = licenseNumber });
+                    return await conn.QueryFirstOrDefaultAsync<Vehicle>("select * from Vehicle where Name = @Name",
+                        new { Name = Name });
 
                 }
                 catch (SqlException ex)

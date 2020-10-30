@@ -83,8 +83,8 @@ namespace Pitstop.WorkshopManagementAPI.Domain.Entities
         {
             MaintenanceJob job = new MaintenanceJob(e.JobId);
             Customer customer = new Customer(e.CustomerInfo.Id, e.CustomerInfo.Name, e.CustomerInfo.TelephoneNumber);
-            LicenseNumber licenseNumber = LicenseNumber.Create(e.VehicleInfo.LicenseNumber);
-            Vehicle vehicle = new Vehicle(licenseNumber, e.VehicleInfo.Brand, e.VehicleInfo.Type, customer.Id);
+            Name Name = Name.Create(e.VehicleInfo.Name);
+            Vehicle vehicle = new Vehicle(Name, e.VehicleInfo.Brand, e.VehicleInfo.Type, customer.Id);
             Timeslot plannedTimeslot = Timeslot.Create(e.StartTime, e.EndTime);
             job.Plan(plannedTimeslot, vehicle, customer, e.Description);
             Jobs.Add(job);

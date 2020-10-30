@@ -9,6 +9,6 @@ namespace Pitstop.WorkshopManagementAPI.Repositories
     public interface IVehicleRepository
     {
         Task<IEnumerable<Vehicle>> GetVehiclesAsync();
-        Task<Vehicle> GetVehicleAsync(string licenseNumber);
+        Task<Vehicle> GetVehicleAsync(string Name);
     }
 }

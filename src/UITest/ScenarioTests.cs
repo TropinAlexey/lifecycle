@@ -22,7 +22,7 @@ namespace Pitstop.UITest
             string testrunId = Guid.NewGuid().ToString("N");
             PitstopApp pitstop = new PitstopApp(testrunId, TestConstants.PitstopStartUrl);
             var homePage = pitstop.Start();
-            string licenseNumber = TestDataGenerators.GenerateRandomLicenseNumber();
+            string Name = TestDataGenerators.GenerateRandomName();
 
             // act
             pitstop.Menu
@@ -42,9 +42,9 @@ namespace Pitstop.UITest
                 .RegisterVehicle()
                 .Cancel()
                 .RegisterVehicle()
-                .FillVehicleDetails(licenseNumber, "Testla", "Model T", $"TestCustomer {testrunId}")
+                .FillVehicleDetails(Name, "Testla", "Model T", $"TestCustomer {testrunId}")
                 .Submit()
-                .SelectVehicle(licenseNumber)
+                .SelectVehicle(Name)
                 .Back(); 
 
             pitstop.Menu
@@ -52,7 +52,7 @@ namespace Pitstop.UITest
                 .RegisterMaintenanceJob()
                 .Cancel()
                 .RegisterMaintenanceJob()
-                .FillJobDetails("08:00", "12:00", $"Job {testrunId}", licenseNumber)
+                .FillJobDetails("08:00", "12:00", $"Job {testrunId}", Name)
                 .Submit()
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .Back(); 

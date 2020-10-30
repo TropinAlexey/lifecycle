@@ -1,31 +1,31 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Pitstop.UITest.PageModel.Pages.WorkshopManagement
+namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
 {
     /// <summary>
     /// Represents the Register MaintenanceJob page.
     /// </summary>
     public class RegisterMaintenanceJobPage : PitstopPage
     {
-        public RegisterMaintenanceJobPage(PitstopApp pitstop) : base("Workshop Management - schedule maintenance", pitstop)
+        public RegisterMaintenanceJobPage(PitstopApp pitstop) : base("Repair - schedule maintenance", pitstop)
         {
         }
 
-        public RegisterMaintenanceJobPage FillJobDetails(string startTime, string endTime, string description, string licenseNumber)
+        public RegisterMaintenanceJobPage FillJobDetails(string startTime, string endTime, string description, string Name)
         {
-            var startTimeBox = WebDriver.FindElement(By.Name("StartTime"));
+            var startTimeBox = WebDriver.FindElement(By.Name("From when?"));
             startTimeBox.Clear();
             startTimeBox.SendKeys(startTime);
 
-            var endTimeBox = WebDriver.FindElement(By.Name("EndTime"));
+            var endTimeBox = WebDriver.FindElement(By.Name("Until when?"));
             endTimeBox.Clear();
             endTimeBox.SendKeys(endTime);
 
-            WebDriver.FindElement(By.Name("Description")).SendKeys(description);
+            WebDriver.FindElement(By.Name("Please, describe a problem:")).SendKeys(description);
             
-            SelectElement select = new SelectElement(WebDriver.FindElement(By.Id("SelectedVehicleLicenseNumber")));
-            select.SelectByValue(licenseNumber);
+            SelectElement select = new SelectElement(WebDriver.FindElement(By.Id("SelectedName")));     //TODO: change literal to nameof(SelectedName)
+            select.SelectByValue(Name);
             
             return this;
         }

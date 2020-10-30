@@ -41,11 +41,11 @@ namespace PitStop.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Details(string licenseNumber)
+        public async Task<IActionResult> Details(string Name)
         {
             return await _resiliencyHelper.ExecuteResilient(async () =>
             {
-                Vehicle vehicle = await _vehicleManagementAPI.GetVehicleByLicenseNumber(licenseNumber);
+                Vehicle vehicle = await _vehicleManagementAPI.GetVehicleByName(Name);
                 Customer customer = await _customerManagementAPI.GetCustomerById(vehicle.OwnerId);
 
                 var model = new VehicleManagementDetailsViewModel

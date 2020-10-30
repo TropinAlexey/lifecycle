@@ -79,14 +79,14 @@ namespace Pitstop.WorkshopManagementEventHandler
 
         private async Task<bool> HandleAsync(VehicleRegistered e)
         {
-            Log.Information("Register Vehicle: {LicenseNumber}, {Brand}, {Type}, Owner Id: {OwnerId}", 
-                e.LicenseNumber, e.Brand, e.Type, e.OwnerId);
+            Log.Information("Register Vehicle: {Name}, {Brand}, {Type}, Owner Id: {OwnerId}", 
+                e.Name, e.Brand, e.Type, e.OwnerId);
 
             try
             {
                 await _dbContext.Vehicles.AddAsync(new Vehicle
                 {
-                    LicenseNumber = e.LicenseNumber,
+                    Name = e.Name,
                     Brand = e.Brand,
                     Type = e.Type,
                     OwnerId = e.OwnerId
@@ -95,7 +95,7 @@ namespace Pitstop.WorkshopManagementEventHandler
             }
             catch(DbUpdateException)
             {
-                Console.WriteLine($"Skipped adding vehicle with license number {e.LicenseNumber}.");
+                Console.WriteLine($"Skipped adding vehicle with license number {e.Name}.");
             }
 
             return true;
@@ -126,8 +126,8 @@ namespace Pitstop.WorkshopManagementEventHandler
 
         private async Task<bool> HandleAsync(MaintenanceJobPlanned e)
         {
-            Log.Information("Register Maintenance Job: {JobId}, {StartTime}, {EndTime}, {CustomerName}, {LicenseNumber}", 
-                e.JobId, e.StartTime, e.EndTime, e.CustomerInfo.Name, e.VehicleInfo.LicenseNumber);
+            Log.Information("Register Maintenance Job: {JobId}, {StartTime}, {EndTime}, {CustomerName}, {Name}", 
+                e.JobId, e.StartTime, e.EndTime, e.CustomerInfo.Name, e.VehicleInfo.Name);
 
             try
             {
@@ -144,12 +144,12 @@ namespace Pitstop.WorkshopManagementEventHandler
                 }
 
                 // determine vehicle
-                Vehicle vehicle = await _dbContext.Vehicles.FirstOrDefaultAsync(v => v.LicenseNumber == e.VehicleInfo.LicenseNumber);
+                Vehicle vehicle = await _dbContext.Vehicles.FirstOrDefaultAsync(v => v.Name == e.VehicleInfo.Name);
                 if (vehicle == null)
                 {
                     vehicle = new Vehicle
                     {
-                        LicenseNumber = e.VehicleInfo.LicenseNumber,
+                        Name = e.VehicleInfo.Name,
                         Brand = e.VehicleInfo.Brand,
                         Type = e.VehicleInfo.Type,
                         OwnerId = customer.CustomerId

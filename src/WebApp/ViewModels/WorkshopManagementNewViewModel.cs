@@ -32,7 +32,7 @@ namespace Pitstop.ViewModels
 
         [Required(ErrorMessage = "Vehicle is required")]
         [Display(Name = "Vehicle")]
-        public string SelectedVehicleLicenseNumber { get; set; }
+        public string SelectedName { get; set; }
 
         public string Error { get; set; }
     }

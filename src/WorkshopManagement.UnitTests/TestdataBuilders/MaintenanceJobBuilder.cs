@@ -58,7 +58,7 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
         public MaintenanceJobBuilder WithVehicle(Vehicle vehicle)
         {
             VehicleBuilder
-                .WithLicenseNumber(vehicle.Id)
+                .WithName(vehicle.Id)
                 .WithBrand(vehicle.Brand)
                 .WithType(vehicle.Type)
                 .WithOwnerId(vehicle.OwnerId);
