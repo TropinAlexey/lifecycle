@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using BWMS.InvoiceService.CommunicationChannels;
 using BWMS.InvoiceService.Events;
 using BWMS.InvoiceService.Model;
@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.InvoiceService
+namespace BWMS.InvoiceService
 {
     public class InvoiceManager : IHostedService, IMessageHandlerCallback
     {

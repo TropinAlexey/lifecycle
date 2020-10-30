@@ -1,4 +1,4 @@
-﻿using BWMS.Infrastructure.Messaging;
+﻿using Pitstop.Infrastructure.Messaging;
 using System;
 
 namespace BWMS.CustomerManagementAPI.Commands

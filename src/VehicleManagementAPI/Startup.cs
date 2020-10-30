@@ -5,12 +5,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using BWMS.Application.VehicleManagement.DataAccess;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using Serilog;
 using Microsoft.Extensions.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Hosting;
-using BWMS.Infrastructure.Messaging.Configuration;
+using Pitstop.Infrastructure.Messaging.Configuration;
 
 namespace BWMS.Application.VehicleManagement
 {

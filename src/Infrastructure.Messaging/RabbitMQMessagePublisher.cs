@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BWMS.Infrastructure.Messaging
+namespace Pitstop.Infrastructure.Messaging
 {
     /// <summary>
     /// RabbitMQ implementation of the MessagePublisher.

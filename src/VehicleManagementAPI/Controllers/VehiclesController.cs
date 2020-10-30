@@ -4,7 +4,7 @@ using BWMS.Application.VehicleManagement.Model;
 using BWMS.Application.VehicleManagement.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using BWMS.Application.VehicleManagement.Events;
 using BWMS.Application.VehicleManagement.Commands;
 using BWMS.VehicleManagementAPI.Mappers;

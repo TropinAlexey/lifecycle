@@ -7,7 +7,7 @@ using Polly;
 using Serilog;
 using System.Collections.Generic;
 
-namespace BWMS.Infrastructure.Messaging
+namespace Pitstop.Infrastructure.Messaging
 {
     public class RabbitMQMessageHandler : IMessageHandler
     {

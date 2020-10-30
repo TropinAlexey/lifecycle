@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace BWMS.Infrastructure.Messaging.Configuration
+namespace Pitstop.Infrastructure.Messaging.Configuration
 {
     public class InvalidConfigurationException : Exception
     {

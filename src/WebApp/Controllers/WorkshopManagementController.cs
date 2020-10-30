@@ -13,7 +13,7 @@ using Refit;
 using System.Net;
 using WebApp.Models;
 
-namespace PitStop.Controllers
+namespace BWMS.Controllers
 {
     public class WorkshopManagementController : Controller
     {
@@ -192,8 +192,8 @@ namespace PitStop.Controllers
             return vehicles.Select(v =>
                 new SelectListItem
                 {
-                    Value = v.BikeName,
-                    Text = $"{v.Brand} {v.Type} [{v.BikeName}]"
+                    Value = v.Name,
+                    Text = $"{v.Brand} {v.Type} [{v.Name}]"
                 });
         }
     }

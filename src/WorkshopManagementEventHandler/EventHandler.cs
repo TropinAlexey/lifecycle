@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using BWMS.WorkshopManagementEventHandler.DataAccess;
 using BWMS.WorkshopManagementEventHandler.Events;
 using BWMS.WorkshopManagementEventHandler.Model;

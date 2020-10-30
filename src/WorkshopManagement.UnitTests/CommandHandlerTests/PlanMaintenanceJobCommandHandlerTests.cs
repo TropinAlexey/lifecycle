@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 using BWMS.WorkshopManagementAPI.Commands;
 using WorkshopManagement.UnitTests.TestdataBuilders;
 using WorkshopManagementAPI.CommandHandlers;

@@ -13,7 +13,7 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
     <PackageReference Include="Microsoft.AspNetCore.HealthChecks" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.HealthChecks.SqlServer" Version="1.0.0" />
-    <PackageReference Include="BWMS.Infrastructure.Messaging" Version="2.7.1" />
+    <PackageReference Include="Pitstop.Infrastructure.Messaging" Version="2.7.1" />
     <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

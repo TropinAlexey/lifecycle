@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using BWMS.Infrastructure.Messaging;
+using Pitstop.Infrastructure.Messaging;
 
 namespace BWMS.WorkshopManagementAPI.Domain.Core
 {
