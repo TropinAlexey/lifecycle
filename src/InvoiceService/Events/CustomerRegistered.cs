@@ -1,7 +1,7 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 
-namespace Pitstop.InvoiceService.Events
+namespace BWMS.InvoiceService.Events
 {
     public class CustomerRegistered : Event
     {

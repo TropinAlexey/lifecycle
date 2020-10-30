@@ -3,16 +3,16 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementAPI.Repositories;
+using BWMS.Infrastructure.Messaging;
+using BWMS.WorkshopManagementAPI.Repositories;
 using Serilog;
 using Microsoft.Extensions.HealthChecks;
 using WorkshopManagementAPI.CommandHandlers;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Pitstop.Infrastructure.Messaging.Configuration;
+using BWMS.Infrastructure.Messaging.Configuration;
 
-namespace Pitstop.WorkshopManagementAPI
+namespace BWMS.WorkshopManagementAPI
 {
     public class Startup
     {

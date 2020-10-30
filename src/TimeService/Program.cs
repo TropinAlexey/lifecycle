@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pitstop.Infrastructure.Messaging.Configuration;
+using BWMS.Infrastructure.Messaging.Configuration;
 using Serilog;
 using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.TimeService
+namespace BWMS.TimeService
 {
     class Program
     {

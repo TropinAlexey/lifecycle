@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.InvoiceService.CommunicationChannels;
-using Pitstop.InvoiceService.Events;
-using Pitstop.InvoiceService.Model;
-using Pitstop.InvoiceService.Repositories;
+using BWMS.Infrastructure.Messaging;
+using BWMS.InvoiceService.CommunicationChannels;
+using BWMS.InvoiceService.Events;
+using BWMS.InvoiceService.Model;
+using BWMS.InvoiceService.Repositories;
 using Serilog;
 using System;
 using System.Linq;
@@ -156,7 +156,7 @@ namespace Pitstop.InvoiceService
             body.AppendLine("<image src='cid:banner.jpg'>");
 
             body.AppendLine("<table style='width: 100%; border: 0px; font-size: 25pt;'><tr>");
-            body.AppendLine("<td>PITSTOP GARAGE</td>");
+            body.AppendLine("<td>Lifecycle Workshop</td>");
             body.AppendLine("<td style='text-align: right;'>INVOICE</td>");
             body.AppendLine("</tr></table>");
 
@@ -227,7 +227,7 @@ namespace Pitstop.InvoiceService
 
             body.AppendLine("<td valign='top'>");
             body.AppendLine(": ING<br/>");
-            body.AppendLine(": Pitstop Garage<br/>");
+            body.AppendLine(": Lifecycle workshop<br/>");
             body.AppendLine(": NL20INGB0001234567<br/>");
             body.AppendLine($": {invoice.InvoiceId}<br/>");
             body.AppendLine("</td>");
@@ -236,16 +236,16 @@ namespace Pitstop.InvoiceService
 
             // greetings
             body.AppendLine("Greetings,<br/><br/>");
-            body.AppendLine("The PitStop crew<br/>");
+            body.AppendLine("The Lifecycle crew<br/>");
 
             body.AppendLine("</htm></body>");
 
             MailMessage mailMessage = new MailMessage
             {
-                From = new MailAddress("invoicing@pitstop.nl"),
-                Subject = $"Pitstop Garage Invoice #{invoice.InvoiceId}"
+                From = new MailAddress("lifecyce.kyiv@gmail.com"),
+                Subject = $"Lifecycle workshop Invoice #{invoice.InvoiceId}"
             };
-            mailMessage.To.Add("pitstop@prestoprint.nl");
+            mailMessage.To.Add("lifecyce.kyiv@gmail.com");
 
             mailMessage.Body = body.ToString();
             mailMessage.IsBodyHtml = true;

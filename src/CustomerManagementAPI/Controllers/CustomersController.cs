@@ -2,16 +2,16 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-using Pitstop.CustomerManagementAPI.DataAccess;
-using Pitstop.CustomerManagementAPI.Model;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.CustomerManagementAPI.Events;
-using Pitstop.CustomerManagementAPI.Commands;
-using Pitstop.CustomerManagementAPI.Mappers;
+using BWMS.CustomerManagementAPI.DataAccess;
+using BWMS.CustomerManagementAPI.Model;
+using BWMS.Infrastructure.Messaging;
+using BWMS.CustomerManagementAPI.Events;
+using BWMS.CustomerManagementAPI.Commands;
+using BWMS.CustomerManagementAPI.Mappers;
 using Serilog;
 using System;
 
-namespace Pitstop.Application.CustomerManagementAPI.Controllers
+namespace BWMS.Application.CustomerManagementAPI.Controllers
 {
     [Route("/api/[controller]")]
     public class CustomersController : Controller

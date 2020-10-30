@@ -1,17 +1,17 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.Infrastructure.Messaging.Configuration;
-using Pitstop.InvoiceService.CommunicationChannels;
-using Pitstop.InvoiceService.Repositories;
+using BWMS.Infrastructure.Messaging;
+using BWMS.Infrastructure.Messaging.Configuration;
+using BWMS.InvoiceService.CommunicationChannels;
+using BWMS.InvoiceService.Repositories;
 using Serilog;
 using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.InvoiceService
+namespace BWMS.InvoiceService
 {
     class Program
     {

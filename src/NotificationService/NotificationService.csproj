@@ -3,8 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Pitstop.NotificationService</AssemblyName>
-    <RootNamespace>Pitstop.NotificationService</RootNamespace>
+    <AssemblyName>BWMS.NotificationService</AssemblyName>
+    <RootNamespace>BWMS.NotificationService</RootNamespace>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="3.1.5" />
-    <PackageReference Include="Pitstop.Infrastructure.Messaging" Version="2.7.1" />
+    <PackageReference Include="BWMS.Infrastructure.Messaging" Version="2.7.1" />
     <PackageReference Include="Dapper" Version="2.0.35" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
     <PackageReference Include="AutoMapper" Version="9.0.0" />

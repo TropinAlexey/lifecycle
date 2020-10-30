@@ -1,4 +1,4 @@
-﻿@model Pitstop.ViewModels.WorkshopManagementNewViewModel
+﻿@model BWMS.ViewModels.WorkshopManagementNewViewModel
 @{
     ViewData["Title"] = "Schedule Maintenance";
 }
@@ -11,9 +11,9 @@
 
 @if (!string.IsNullOrEmpty(Model.Error))
 {
-    <div class="well-sm alert-danger">
-        <label>Unable to register: @Model.Error</label>
-    </div>
+<div class="well-sm alert-danger">
+    <label>Unable to register: @Model.Error</label>
+</div>
 }
 
 

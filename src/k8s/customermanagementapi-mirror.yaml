@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: customermanagementapi
-  namespace: pitstop
+  namespace: BWMS
 spec:
   host: customermanagementapi
   subsets:
@@ -19,7 +19,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: customermanagementapi
-  namespace: pitstop
+  namespace: BWMS
 spec:
   hosts:
     - customermanagementapi

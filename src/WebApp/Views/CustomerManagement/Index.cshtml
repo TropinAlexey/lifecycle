@@ -1,4 +1,4 @@
-﻿@model Pitstop.ViewModels.CustomerManagementViewModel
+﻿@model BWMS.ViewModels.CustomerManagementViewModel
 @{
     ViewData["Title"] = "Customers Overview";
 }
@@ -16,12 +16,12 @@
     <tbody>
         @foreach (var customer in Model.Customers)
         {
-            <tr class="clickable" onclick="location.href = '@(Url.Action("Details", "CustomerManagement", new { id = customer.CustomerId }))'">
-                <td>@customer.Name</td>
-                <td>@customer.Address</td>
-                <td>@customer.City</td>
-                <td>@customer.EmailAddress</td>
-            </tr>
+        <tr class="clickable" onclick="location.href = '@(Url.Action("Details", "CustomerManagement", new { id = customer.CustomerId }))'">
+            <td>@customer.Name</td>
+            <td>@customer.Address</td>
+            <td>@customer.City</td>
+            <td>@customer.EmailAddress</td>
+        </tr>
         }
     </tbody>
 </table>

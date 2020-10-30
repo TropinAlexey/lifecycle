@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Serilog;
 
-namespace Pitstop.WorkshopManagementEventHandler.DataAccess
+namespace BWMS.WorkshopManagementEventHandler.DataAccess
 {
     public static class DBInitializer
     {

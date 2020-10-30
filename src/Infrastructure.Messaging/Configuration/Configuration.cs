@@ -3,7 +3,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Pitstop.Infrastructure.Messaging.Configuration
+namespace BWMS.Infrastructure.Messaging.Configuration
 {
     public static class Configuration
     {

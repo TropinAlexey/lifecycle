@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pitstop.Infrastructure.Messaging
+namespace BWMS.Infrastructure.Messaging
 {
     public interface IMessageHandlerCallback
     {

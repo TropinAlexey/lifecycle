@@ -1,4 +1,4 @@
-﻿namespace Pitstop.ViewModels
+﻿namespace BWMS.ViewModels
 {
     public class WorkshopManagementOfflineViewModel
     {

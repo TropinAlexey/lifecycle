@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pitstop.Models;
-using Pitstop.ViewModels;
+using BWMS.Models;
+using BWMS.ViewModels;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;

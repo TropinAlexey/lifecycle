@@ -1,6 +1,6 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Events;
-using Pitstop.WorkshopManagementAPI.Domain;
+using BWMS.WorkshopManagementAPI.Events;
+using BWMS.WorkshopManagementAPI.Domain;
 
 namespace WorkshopManagement.UnitTests.TestdataBuilders
 {

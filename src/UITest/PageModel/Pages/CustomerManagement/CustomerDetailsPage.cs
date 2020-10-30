@@ -1,20 +1,20 @@
 using OpenQA.Selenium;
 
-namespace Pitstop.UITest.PageModel.Pages.CustomerManagement
+namespace BWMS.UITest.PageModel.Pages.CustomerManagement
 {
     /// <summary>
     /// Represents the CustomerDetails page.
     /// </summary>
-    public class CustomerDetailsPage : PitstopPage
+    public class CustomerDetailsPage : MainPage
     {
-        public CustomerDetailsPage(PitstopApp pitstop) : base("Customer Management - details", pitstop)
+        public CustomerDetailsPage(App app) : base("Customer Management - details", app)
         {
         }
 
         public CustomerManagementPage Back()
         {
             WebDriver.FindElement(By.Id("BackButton")).Click();
-            return new CustomerManagementPage(Pitstop);
+            return new CustomerManagementPage(BWMS);
         }
     }
 }

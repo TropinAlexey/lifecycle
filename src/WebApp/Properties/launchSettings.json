@@ -12,7 +12,7 @@
     }
   },
   "profiles": {
-    "PitStop": {
+    "BWMS": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "http://localhost:7000",

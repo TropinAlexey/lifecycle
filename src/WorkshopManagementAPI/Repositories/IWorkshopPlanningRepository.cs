@@ -1,10 +1,10 @@
-﻿using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
+﻿using BWMS.Infrastructure.Messaging;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories
+namespace BWMS.WorkshopManagementAPI.Repositories
 {
     public interface IWorkshopPlanningRepository
     {

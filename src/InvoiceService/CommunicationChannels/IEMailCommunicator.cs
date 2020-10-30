@@ -4,7 +4,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pitstop.InvoiceService.CommunicationChannels
+namespace BWMS.InvoiceService.CommunicationChannels
 {
     public interface IEmailCommunicator
     {

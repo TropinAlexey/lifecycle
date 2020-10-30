@@ -1,10 +1,10 @@
-﻿using Pitstop.InvoiceService.Model;
+﻿using BWMS.InvoiceService.Model;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace Pitstop.InvoiceService.Repositories
+namespace BWMS.InvoiceService.Repositories
 {
     public interface IInvoiceRepository
     {

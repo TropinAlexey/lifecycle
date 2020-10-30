@@ -1,9 +1,9 @@
-﻿using Pitstop.NotificationService.Model;
+﻿using BWMS.NotificationService.Model;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Pitstop.NotificationService.Repositories
+namespace BWMS.NotificationService.Repositories
 {
     public interface INotificationRepository
     {

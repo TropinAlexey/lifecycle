@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Pitstop.Infrastructure.Messaging.Configuration;
+using BWMS.Infrastructure.Messaging.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;

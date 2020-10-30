@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.InvoiceService.Model
+namespace BWMS.InvoiceService.Model
 {
     public class Invoice
     {

@@ -1,7 +1,7 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 
-namespace Pitstop.CustomerManagementAPI.Commands
+namespace BWMS.CustomerManagementAPI.Commands
 {
     public class RegisterCustomer : Command
     {

@@ -1,17 +1,17 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.Infrastructure.Messaging.Configuration;
-using Pitstop.NotificationService.NotificationChannels;
-using Pitstop.NotificationService.Repositories;
+using BWMS.Infrastructure.Messaging;
+using BWMS.Infrastructure.Messaging.Configuration;
+using BWMS.NotificationService.NotificationChannels;
+using BWMS.NotificationService.Repositories;
 using Serilog;
 using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.NotificationService
+namespace BWMS.NotificationService
 {
     class Program
     {

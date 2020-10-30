@@ -15,4 +15,4 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 COPY --from=build-env /app/out .
 
 # Start
-ENTRYPOINT ["dotnet", "Pitstop.TimeService.dll"]
+ENTRYPOINT ["dotnet", "BWMS.TimeService.dll"]

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore;
 using Serilog;
 
-namespace Pitstop.WorkshopManagementAPI
+namespace BWMS.WorkshopManagementAPI
 {
     public class Program
     {

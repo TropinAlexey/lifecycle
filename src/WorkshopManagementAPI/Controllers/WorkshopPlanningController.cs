@@ -1,18 +1,18 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Pitstop.WorkshopManagementAPI.Repositories;
+using BWMS.WorkshopManagementAPI.Repositories;
 using System;
 using System.Linq;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
-using Pitstop.WorkshopManagementAPI.DTOs;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.DTOs;
 using WorkshopManagementAPI.CommandHandlers;
 using Serilog;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Mappers;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Mappers;
 
-namespace Pitstop.WorkshopManagementAPI.Controllers
+namespace BWMS.WorkshopManagementAPI.Controllers
 {
     [Route("/api/[controller]")]
     public class WorkshopPlanningController : Controller

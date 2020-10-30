@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Repositories;
+using BWMS.Infrastructure.Messaging;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Repositories;
 
 namespace WorkshopManagementAPI.CommandHandlers
 {

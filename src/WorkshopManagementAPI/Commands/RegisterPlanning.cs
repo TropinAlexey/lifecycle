@@ -1,5 +1,5 @@
 using System;
-using Pitstop.Infrastructure.Messaging;
+using BWMS.Infrastructure.Messaging;
 
 namespace WorkshopManagementAPI.Commands
 {

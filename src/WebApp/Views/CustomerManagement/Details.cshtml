@@ -1,4 +1,4 @@
-﻿@model Pitstop.ViewModels.CustomerManagementDetailsViewModel
+﻿@model BWMS.ViewModels.CustomerManagementDetailsViewModel
 @{
     ViewData["Title"] = "Customer Details";
 }
@@ -33,10 +33,11 @@
         @if (Model.Customer.LoyaltyLevel.HasValue)
         {
             string imagePath = $"/images/{Model.Customer.LoyaltyLevel}.png";
-            <tr>
-                <td width="150">LoyaltyLevel :</td>
-                <td><img src="@imagePath" /></td>
-            </tr>        
+        <tr>
+            <td width="150">LoyaltyLevel :</td>
+            <td><img src="@imagePath" /></td>
+        </tr>
+
         }
     </tbody>
 </table>

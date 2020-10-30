@@ -1,4 +1,4 @@
-﻿namespace Pitstop.Infrastructure.Messaging
+﻿namespace BWMS.Infrastructure.Messaging
 {
     public interface IMessageHandler
     {

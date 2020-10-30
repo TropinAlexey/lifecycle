@@ -1,21 +1,22 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
 
-namespace Pitstop.UITest.PageModel.Pages.WorkshopManagement
+namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
 {
     /// <summary>
     /// Represents the WorkshopManagement page.
     /// </summary>
     public class WorkshopManagementPage : PitstopPage
     {
-        public WorkshopManagementPage(PitstopApp pitstop) : base("Workshop Management - overview", pitstop)
+        public WorkshopManagementPage(App app) : base("Workshop Management - overview", app)
         {
         }
 
         public RegisterMaintenanceJobPage RegisterMaintenanceJob()
         {
             WebDriver.FindElement(By.Id("RegisterMaintenanceJobButton")).Click();
-            return new RegisterMaintenanceJobPage(Pitstop);
+            return new RegisterMaintenanceJobPage(BWMS);
         }
 
         public MaintenanceJobDetailsPage SelectMaintenanceJob(string jobDescription)
@@ -23,7 +24,7 @@ namespace Pitstop.UITest.PageModel.Pages.WorkshopManagement
             WebDriver
                 .FindElement(By.XPath($"//td[contains(text(),'{jobDescription}')]"))
                 .Click();
-            return new MaintenanceJobDetailsPage(Pitstop); 
+            return new MaintenanceJobDetailsPage(BWMS); 
         }
     }
 }

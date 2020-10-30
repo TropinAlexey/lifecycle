@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Pitstop.CustomerManagementAPI</AssemblyName>
-    <RootNamespace>Pitstop.CustomerManagementAPI</RootNamespace>
+    <AssemblyName>BWMS.CustomerManagementAPI</AssemblyName>
+    <RootNamespace>BWMS.CustomerManagementAPI</RootNamespace>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 

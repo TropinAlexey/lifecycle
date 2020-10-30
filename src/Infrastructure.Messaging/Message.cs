@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.Infrastructure.Messaging
+namespace BWMS.Infrastructure.Messaging
 {
     public class Message
     {

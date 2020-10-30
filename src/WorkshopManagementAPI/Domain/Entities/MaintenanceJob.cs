@@ -1,8 +1,8 @@
 ﻿using System;
-using Pitstop.WorkshopManagementAPI.Domain.Core;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.Core;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Entities
+namespace BWMS.WorkshopManagementAPI.Domain.Entities
 {
     public class MaintenanceJob : Entity<Guid>
     {

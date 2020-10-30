@@ -1,8 +1,8 @@
-using Pitstop.CustomerManagementAPI.Commands;
-using Pitstop.CustomerManagementAPI.Events;
-using Pitstop.CustomerManagementAPI.Model;
+using BWMS.CustomerManagementAPI.Commands;
+using BWMS.CustomerManagementAPI.Events;
+using BWMS.CustomerManagementAPI.Model;
 
-namespace Pitstop.CustomerManagementAPI.Mappers
+namespace BWMS.CustomerManagementAPI.Mappers
 {
     public static class Mappers
     {

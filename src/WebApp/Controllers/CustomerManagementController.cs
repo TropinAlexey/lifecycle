@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Pitstop.Models;
-using Pitstop.ViewModels;
-using Pitstop.WebApp.Mappers;
+using BWMS.Models;
+using BWMS.ViewModels;
+using BWMS.WebApp.Mappers;
 using System.Threading.Tasks;
 using WebApp.Commands;
 using WebApp.RESTClients;
 
-namespace PitStop.Controllers
+namespace BWMS.Controllers
 {
     public class CustomerManagementController : Controller
     {

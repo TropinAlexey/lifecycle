@@ -2,9 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.Infrastructure.Messaging.Configuration;
-using Pitstop.WorkshopManagementEventHandler.DataAccess;
+using BWMS.Infrastructure.Messaging;
+using BWMS.Infrastructure.Messaging.Configuration;
+using BWMS.WorkshopManagementEventHandler.DataAccess;
 using Polly;
 using Serilog;
 using System;
@@ -12,7 +12,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementEventHandler
+namespace BWMS.WorkshopManagementEventHandler
 {
     class Program
     {

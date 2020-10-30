@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Pitstop.Models
+namespace BWMS.Models
 {
     public class WorkshopPlanning
     {

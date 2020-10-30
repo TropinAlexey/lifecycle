@@ -1,5 +1,5 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Commands;
 
 namespace WorkshopManagement.UnitTests.TestdataBuilders
 {

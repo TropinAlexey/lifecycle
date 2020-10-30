@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pitstop.WorkshopManagementAPI.DTOs
+namespace BWMS.WorkshopManagementAPI.DTOs
 {
     public class MaintenanceJobDTO
     {

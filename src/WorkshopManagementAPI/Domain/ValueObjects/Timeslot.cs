@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
 using WorkshopManagementAPI.Domain.Core;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.ValueObjects
+namespace BWMS.WorkshopManagementAPI.Domain.ValueObjects
 {
     public class Timeslot : ValueObject
     {

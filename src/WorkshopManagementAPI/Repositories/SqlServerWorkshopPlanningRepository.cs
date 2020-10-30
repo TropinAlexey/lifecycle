@@ -5,14 +5,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Dapper;
 using Polly;
-using Pitstop.WorkshopManagementAPI.Repositories.Model;
-using Pitstop.Infrastructure.Messaging;
+using BWMS.WorkshopManagementAPI.Repositories.Model;
+using BWMS.Infrastructure.Messaging;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Converters;
 using System.Data.SqlClient;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
+using PitBWMSstop.WorkshopManagementAPI.Domain.Entities;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories
+namespace BWMS.WorkshopManagementAPI.Repositories
 {
     public class SqlServerWorkshopPlanningRepository : IWorkshopPlanningRepository
     {
@@ -223,7 +223,7 @@ namespace Pitstop.WorkshopManagementAPI.Repositories
         /// <param name="eventData">The event-data JSON to deserialize.</param>
         private Event DeserializeEventData(string messageType, string eventData)
         {
-            Type eventType = Type.GetType($"Pitstop.WorkshopManagementAPI.Events.{messageType}");
+            Type eventType = Type.GetType($"BWMS.WorkshopManagementAPI.Events.{messageType}");
             JObject obj = JsonConvert.DeserializeObject<JObject>(eventData, _serializerSettings);
             return obj.ToObject(eventType) as Event;
         }

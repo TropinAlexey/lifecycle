@@ -1,7 +1,7 @@
-﻿using Pitstop.Models;
+﻿using BWMS.Models;
 using System.Collections.Generic;
 
-namespace Pitstop.ViewModels
+namespace BWMS.ViewModels
 {
     public class CustomerManagementViewModel
     {

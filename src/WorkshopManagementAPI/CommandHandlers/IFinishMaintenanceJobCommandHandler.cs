@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
 
 namespace WorkshopManagementAPI.CommandHandlers
 {

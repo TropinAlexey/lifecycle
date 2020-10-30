@@ -1,9 +1,9 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.InvoiceService.Events
+namespace BWMS.InvoiceService.Events
 {
     public class DayHasPassed : Event
     {

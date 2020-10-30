@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories
+namespace BWMS.WorkshopManagementAPI.Repositories
 {
     public class DatabaseNotCreatedException : Exception
     {

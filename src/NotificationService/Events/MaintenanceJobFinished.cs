@@ -1,7 +1,7 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 
-namespace Pitstop.NotificationService.Events
+namespace BWMS.NotificationService.Events
 {
     public class MaintenanceJobFinished : Event
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories
+namespace BWMS.WorkshopManagementAPI.Repositories
 {
     public class ConcurrencyException : Exception
     {

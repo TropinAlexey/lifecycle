@@ -10,7 +10,7 @@ param (
 
 if (-not $nomesh -and -not $istio -and -not $linkerd)
 {
-    echo "Error: You must specify how to start Pitstop:"
+    echo "Error: You must specify how to start BWMS:"
     echo "  start-all.ps1 < -nomesh | -istio | -linkerd >."
     return
 }
@@ -25,7 +25,7 @@ if (-not $nomesh)
 
     if ($istio) {
         $meshPostfix = '-istio'
-        echo "Starting Pitstop wit Istio service mesh."
+        echo "Starting BWMS wit Istio service mesh."
 
         # disable global istio side-car injection (only for annotated pods)
         & "./disable-default-istio-injection.ps1"
@@ -33,12 +33,12 @@ if (-not $nomesh)
 
     if ($linkerd) {
         $meshPostfix = '-linkerd'
-        echo "Starting Pitstop wit Linkerd service mesh."
+        echo "Starting BWMS wit Linkerd service mesh."
     }
 }
 else
 {
-    echo "Starting Pitstop without service mesh."
+    echo "Starting BWMS without service mesh."
 }
 
 kubectl apply `

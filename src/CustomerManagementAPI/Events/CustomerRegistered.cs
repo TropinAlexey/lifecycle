@@ -1,10 +1,10 @@
-﻿using Pitstop.CustomerManagementAPI.Commands;
-using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.CustomerManagementAPI.Commands;
+using BWMS.Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.CustomerManagementAPI.Events
+namespace BWMS.CustomerManagementAPI.Events
 {
     public class CustomerRegistered : Event
     {

@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 
-namespace Pitstop.Infrastructure.Messaging
+namespace BWMS.Infrastructure.Messaging
 {
     /// <summary>
     /// Serializer used for all messages.

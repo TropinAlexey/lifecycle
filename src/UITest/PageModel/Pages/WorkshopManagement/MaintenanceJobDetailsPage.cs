@@ -1,27 +1,27 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Pitstop.UITest.PageModel.Pages.WorkshopManagement
+namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
 {
     /// <summary>
     /// Represents the MaintenanceJob Details page.
     /// </summary>
     public class MaintenanceJobDetailsPage : PitstopPage
     {        
-        public MaintenanceJobDetailsPage(PitstopApp pitstop) : base("Workshop Management - details", pitstop)
+        public MaintenanceJobDetailsPage(App app) : base("Workshop Management - details", app)
         {
         }
 
         public FinishMaintenanceJobPage Complete()
         {
             WebDriver.FindElement(By.Id("CompleteButton")).Click();
-            return new FinishMaintenanceJobPage(Pitstop);
+            return new FinishMaintenanceJobPage(BWMS);
         }
 
         public WorkshopManagementPage Back()
         {
             WebDriver.FindElement(By.Id("BackButton")).Click();
-            return new WorkshopManagementPage(Pitstop);
+            return new WorkshopManagementPage(BWMS);
         }
 
         public MaintenanceJobDetailsPage GetJobStatus(out string status)

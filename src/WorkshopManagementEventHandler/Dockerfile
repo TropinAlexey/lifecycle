@@ -14,4 +14,4 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 COPY --from=build-env /app/out .
 
 # Start
-ENTRYPOINT ["dotnet", "Pitstop.WorkshopManagementEventHandler.dll"]
+ENTRYPOINT ["dotnet", "BWMS.WorkshopManagementEventHandler.dll"]

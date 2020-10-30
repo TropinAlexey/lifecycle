@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementEventHandler.Model
+namespace BWMS.WorkshopManagementEventHandler.Model
 {
     public class MaintenanceJob
     {

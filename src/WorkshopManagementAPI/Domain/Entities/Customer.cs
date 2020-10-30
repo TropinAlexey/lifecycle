@@ -1,6 +1,6 @@
-﻿using Pitstop.WorkshopManagementAPI.Domain.Core;
+﻿using BWMS.WorkshopManagementAPI.Domain.Core;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Entities
+namespace BWMS.WorkshopManagementAPI.Domain.Entities
 {
     public class Customer : Entity<string>
     {

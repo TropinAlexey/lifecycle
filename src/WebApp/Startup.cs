@@ -8,7 +8,7 @@ using Serilog;
 using Microsoft.Extensions.HealthChecks;
 using System.Threading.Tasks;
 
-namespace PitStop
+namespace BWMS
 {
     public class Startup
     {

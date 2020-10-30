@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pitstop.NotificationService.NotificationChannels
+namespace BWMS.NotificationService.NotificationChannels
 {
     public interface IEmailNotifier
     {

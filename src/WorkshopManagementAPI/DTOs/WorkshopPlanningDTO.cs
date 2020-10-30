@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
 
-namespace Pitstop.WorkshopManagementAPI.DTOs
+namespace BWMS.WorkshopManagementAPI.DTOs
 {
     public class WorkshopPlanningDTO
     {

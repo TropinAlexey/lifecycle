@@ -4,9 +4,9 @@ using System.Reflection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using Pitstop.UITest.PageModel.Pages;
+using BWMS.UITest.PageModel.Pages;
 
-namespace Pitstop.UITest.PageModel
+namespace BWMS.UITest.PageModel
 {
     /// <summary>
     /// Represents the BWMS web-application.

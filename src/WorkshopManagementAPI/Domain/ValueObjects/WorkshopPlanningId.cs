@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using WorkshopManagementAPI.Domain.Core;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.ValueObjects
+namespace BWMS.WorkshopManagementAPI.Domain.ValueObjects
 {
     public class WorkshopPlanningId : ValueObject
     {

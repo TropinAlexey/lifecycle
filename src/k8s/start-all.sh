@@ -8,21 +8,21 @@ MESHPOSTFIX=''
 
 if [ "$1" != "--nomesh" and  "$1" != "--istio" and "$1" != "--linkerd" ]
 then
-    echo "Error: You must specify how to start Pitstop:"
+    echo "Error: You must specify how to start BWMS:"
     echo "  start-all.ps1 < --nomesh | --istio | --linkerd >."
     exit 1
 fi
 
 if [ "$1" = "--nomesh" ]
 then
-    echo "Starting Pitstop without service mesh."
+    echo "Starting BWMS without service mesh."
 fi
 
 if [ "$1" = "--istio" ]
 then
     MESHPOSTFIX='-istio'
 
-    echo "Starting Pitstop with Istio service mesh."
+    echo "Starting BWMS with Istio service mesh."
 
     # disable global istio side-car injection (only for annotated pods)
     ./disable-default-istio-injection.sh
@@ -32,7 +32,7 @@ if [ "$1" = "--linkerd" ]
 then
     MESHPOSTFIX='-linkerd'
 
-    echo "Starting Pitstop with Linkerd service mesh."
+    echo "Starting BWMS with Linkerd service mesh."
 fi
 
 kubectl apply \

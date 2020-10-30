@@ -1,4 +1,4 @@
-namespace Pitstop.WorkshopManagementAPI.Domain.Core
+namespace BWMS.WorkshopManagementAPI.Domain.Core
 {
     /// <summary>
     /// Represents an Entity in the domain (DDD).

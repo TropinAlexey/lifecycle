@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
-    <RootNamespace>Pitstop.UITest</RootNamespace>
+    <RootNamespace>BWMS.UITest</RootNamespace>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 

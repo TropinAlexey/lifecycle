@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Pitstop.Infrastructure.Messaging;
+using BWMS.Infrastructure.Messaging;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Core
+namespace BWMS.WorkshopManagementAPI.Domain.Core
 {
     /// <summary>
     /// Represents an aggregate-root of a domain aggregate (DDD). An aggregate-root is always an entity.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Pitstop.CustomerManagementAPI.Migrations
+namespace BWMS.CustomerManagementAPI.Migrations
 {
     public partial class v1 : Migration
     {

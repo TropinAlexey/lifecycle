@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace Pitstop.UITest.PageModel.Pages
+namespace BWMS.UITest.PageModel.Pages
 {
     /// <summary>
     /// Base class for all the pages.
@@ -8,20 +8,20 @@ namespace Pitstop.UITest.PageModel.Pages
     public class MainPage
     {
         public string Title { get; }
-        public PitstopApp Pitstop { get; }
+        public App App { get; }
 
         public IWebDriver WebDriver => Pitstop.WebDriver;
 
 
         /// <summary>
-        /// Initialize a new PitstopPage instance.
+        /// Initialize a new MainPage instance.
         /// </summary>
         /// <param name="title">The title on the page. This is the text shown as standard title on the page (not the browser window-title!).</param>
         /// <param name="pitstop">The WebApp instance used for the test.</param>
-        public MainPage(string title, PitstopApp pitstop)
+        public MainPage(string title, App app)
         {
             Title = title;
-            Pitstop = pitstop;
+            App = app;
         }
 
         /// <summary>

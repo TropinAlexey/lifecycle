@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Pitstop.CustomerManagementAPI.Model;
+using BWMS.CustomerManagementAPI.Model;
 using Polly;
 using System;
 
-namespace Pitstop.CustomerManagementAPI.DataAccess
+namespace BWMS.CustomerManagementAPI.DataAccess
 {
     public class CustomerManagementDBContext : DbContext
     {

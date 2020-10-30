@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using Pitstop.Models;
+using BWMS.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.ViewModels
+namespace BWMS.ViewModels
 {
     public class WorkshopManagementNewViewModel
     {

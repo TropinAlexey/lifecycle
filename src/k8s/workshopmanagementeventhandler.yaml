@@ -5,7 +5,7 @@ metadata:
     app: workshopmanagementeventhandler
     version: "1.0"
   name: workshopmanagementeventhandler
-  namespace: pitstop
+  namespace: BWMS
 spec:
   replicas: 1
   selector:

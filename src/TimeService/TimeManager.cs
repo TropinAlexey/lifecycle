@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Hosting;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.TimeService.Events;
+using BWMS.Infrastructure.Messaging;
+using BWMS.TimeService.Events;
 using Serilog;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.TimeService
+namespace BWMS.TimeService
 {
     public class TimeManager : IHostedService
     {

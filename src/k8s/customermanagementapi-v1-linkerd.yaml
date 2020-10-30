@@ -5,7 +5,7 @@ metadata:
     app: customermanagementapi
     version: "1.0"
   name: customermanagementapi-v1
-  namespace: pitstop
+  namespace: BWMS
 spec:
   replicas: 1
   selector: null

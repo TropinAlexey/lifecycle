@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-namespace Pitstop.NotificationService.NotificationChannels
+namespace BWMS.NotificationService.NotificationChannels
 {
     public class SMTPEmailNotifier : IEmailNotifier
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using Pitstop.Models;
+using BWMS.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Pitstop.ViewModels
+namespace BWMS.ViewModels
 {
     public class VehicleManagementNewViewModel
     {

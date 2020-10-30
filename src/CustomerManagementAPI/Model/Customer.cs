@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Extensions.Configuration;
-using Pitstop.CustomerManagementAPI.Commands;
+using BWMS.CustomerManagementAPI.Commands;
 
-namespace Pitstop.CustomerManagementAPI.Model
+namespace BWMS.CustomerManagementAPI.Model
 {
     public class Customer
     {

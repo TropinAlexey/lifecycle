@@ -4,15 +4,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Pitstop.Application.VehicleManagement.DataAccess;
-using Pitstop.Infrastructure.Messaging;
+using BWMS.Application.VehicleManagement.DataAccess;
+using BWMS.Infrastructure.Messaging;
 using Serilog;
 using Microsoft.Extensions.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Hosting;
-using Pitstop.Infrastructure.Messaging.Configuration;
+using BWMS.Infrastructure.Messaging.Configuration;
 
-namespace Pitstop.Application.VehicleManagement
+namespace BWMS.Application.VehicleManagement
 {
     public class Startup
     {

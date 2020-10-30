@@ -5,7 +5,7 @@ metadata:
     app: rabbitmq
     version: v1
   name: rabbitmq
-  namespace: pitstop
+  namespace: BWMS
 spec:
   replicas: 1
   selector:
@@ -40,7 +40,7 @@ metadata:
   labels:
     app: rabbitmq
   name: rabbitmq
-  namespace: pitstop
+  namespace: BWMS
 spec:
   type: NodePort
   ports:

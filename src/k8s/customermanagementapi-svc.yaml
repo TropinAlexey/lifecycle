@@ -4,7 +4,7 @@ metadata:
   labels:
     app: customermanagementapi
   name: customermanagementapi
-  namespace: pitstop
+  namespace: BWMS
 spec:
   type: NodePort
   ports:

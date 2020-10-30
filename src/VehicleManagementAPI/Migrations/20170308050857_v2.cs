@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Pitstop.Application.VehicleManagement.Migrations
+namespace BWMS.Application.VehicleManagement.Migrations
 {
     public partial class v2 : Migration
     {

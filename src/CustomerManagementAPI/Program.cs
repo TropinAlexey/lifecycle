@@ -4,7 +4,7 @@ using Microsoft.AspNetCore;
 using Serilog;
 using System.IO;
 
-namespace Pitstop.CustomerManagementAPI
+namespace BWMS.CustomerManagementAPI
 {
     public class Program
     {

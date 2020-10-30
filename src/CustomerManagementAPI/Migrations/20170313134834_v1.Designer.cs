@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Pitstop.CustomerManagementAPI.DataAccess;
+using BWMS.CustomerManagementAPI.DataAccess;
 
-namespace Pitstop.CustomerManagementAPI.Migrations
+namespace BWMS.CustomerManagementAPI.Migrations
 {
     [DbContext(typeof(CustomerManagementDBContext))]
     [Migration("20170313134834_v1")]
@@ -16,7 +16,7 @@ namespace Pitstop.CustomerManagementAPI.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
 
-            modelBuilder.Entity("Pitstop.CustomerManagementAPI.Model.Customer", b =>
+            modelBuilder.Entity("BWMS.CustomerManagementAPI.Model.Customer", b =>
                 {
                     b.Property<string>("CustomerId")
                         .ValueGeneratedOnAdd();

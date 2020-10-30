@@ -1,14 +1,14 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Pitstop.UITest.PageModel.Pages.WorkshopManagement
+namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
 {
     /// <summary>
     /// Represents the Finish MaintenanceJob page.
     /// </summary>
-    public class FinishMaintenanceJobPage : PitstopPage
+    public class FinishMaintenanceJobPage : MainPage
     {        
-        public FinishMaintenanceJobPage(PitstopApp pitstop) : base("Workshop Management - finish maintenance job", pitstop)
+        public FinishMaintenanceJobPage(App app) : base("Repair. Finish maintenance", app)
         {
         }
 
@@ -30,13 +30,13 @@ namespace Pitstop.UITest.PageModel.Pages.WorkshopManagement
         public MaintenanceJobDetailsPage Complete()
         {
             WebDriver.FindElement(By.Id("CompleteButton")).Click();
-            return new MaintenanceJobDetailsPage(Pitstop);
+            return new MaintenanceJobDetailsPage(BWMS);
         }
 
         public MaintenanceJobDetailsPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new MaintenanceJobDetailsPage(Pitstop);
+            return new MaintenanceJobDetailsPage(BWMS);
         }
     }
 }

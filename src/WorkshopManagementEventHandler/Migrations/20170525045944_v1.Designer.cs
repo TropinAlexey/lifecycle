@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Pitstop.WorkshopManagementEventHandler.DataAccess;
+using BWMS.WorkshopManagementEventHandler.DataAccess;
 
-namespace Pitstop.WorkshopManagementEventHandler.Migrations
+namespace BWMS.WorkshopManagementEventHandler.Migrations
 {
     [DbContext(typeof(WorkshopManagementDBContext))]
     [Migration("20170525045944_v1")]
@@ -16,7 +16,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
 
-            modelBuilder.Entity("Pitstop.WorkshopManagementEventHandler.Customer", b =>
+            modelBuilder.Entity("BWMS.WorkshopManagementEventHandler.Customer", b =>
                 {
                     b.Property<string>("CustomerId")
                         .ValueGeneratedOnAdd();
@@ -30,7 +30,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                     b.ToTable("Customer");
                 });
 
-            modelBuilder.Entity("Pitstop.WorkshopManagementEventHandler.Model.MaintenanceJob", b =>
+            modelBuilder.Entity("BWMS.WorkshopManagementEventHandler.Model.MaintenanceJob", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -62,7 +62,7 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                     b.ToTable("MaintenanceJob");
                 });
 
-            modelBuilder.Entity("Pitstop.WorkshopManagementEventHandler.Model.Vehicle", b =>
+            modelBuilder.Entity("BWMS.WorkshopManagementEventHandler.Model.Vehicle", b =>
                 {
                     b.Property<string>("Name")
                         .ValueGeneratedOnAdd();
@@ -78,13 +78,13 @@ namespace Pitstop.WorkshopManagementEventHandler.Migrations
                     b.ToTable("Vehicle");
                 });
 
-            modelBuilder.Entity("Pitstop.WorkshopManagementEventHandler.Model.MaintenanceJob", b =>
+            modelBuilder.Entity("BWMS.WorkshopManagementEventHandler.Model.MaintenanceJob", b =>
                 {
-                    b.HasOne("Pitstop.WorkshopManagementEventHandler.Customer", "Customer")
+                    b.HasOne("BWMS.WorkshopManagementEventHandler.Customer", "Customer")
                         .WithMany()
                         .HasForeignKey("CustomerId");
 
-                    b.HasOne("Pitstop.WorkshopManagementEventHandler.Model.Vehicle", "Vehicle")
+                    b.HasOne("BWMS.WorkshopManagementEventHandler.Model.Vehicle", "Vehicle")
                         .WithMany()
                         .HasForeignKey("Name");
                 });

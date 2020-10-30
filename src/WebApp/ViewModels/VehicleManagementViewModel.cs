@@ -1,10 +1,10 @@
-﻿using Pitstop.Models;
+﻿using BWMS.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.ViewModels
+namespace BWMS.ViewModels
 {
     public class VehicleManagementViewModel
     {

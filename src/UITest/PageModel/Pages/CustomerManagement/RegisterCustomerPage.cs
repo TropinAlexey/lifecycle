@@ -1,13 +1,13 @@
 using OpenQA.Selenium;
 
-namespace Pitstop.UITest.PageModel.Pages.CustomerManagement
+namespace BWMS.UITest.PageModel.Pages.CustomerManagement
 {
     /// <summary>
     /// Represents the RegisterCustomer page.
     /// </summary>
-    public class RegisterCustomerPage : PitstopPage
+    public class RegisterCustomerPage : MainPage
     {   
-        public RegisterCustomerPage(PitstopApp pitstop) : base("Customer Management - register customer", pitstop)
+        public RegisterCustomerPage(App pitstop) : base("Who are you? Let us know", app)
         {
         }
 
@@ -26,13 +26,13 @@ namespace Pitstop.UITest.PageModel.Pages.CustomerManagement
         public CustomerManagementPage Submit()
         {
             WebDriver.FindElement(By.Id("SubmitButton")).Click();
-            return new CustomerManagementPage(Pitstop);
+            return new CustomerManagementPage(BWMS);
         }
 
         public CustomerManagementPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new CustomerManagementPage(Pitstop);
+            return new CustomerManagementPage(BWMS);
         }
     }
 }

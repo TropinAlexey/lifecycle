@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Core
+namespace BWMS.WorkshopManagementAPI.Domain.Core
 {
     public static class ObjectAsEnumerableWrapper
     {

@@ -1,7 +1,7 @@
-﻿using Pitstop.WorkshopManagementEventHandler.Model;
+﻿using BWMS.WorkshopManagementEventHandler.Model;
 using System.Collections.Generic;
 
-namespace Pitstop.WorkshopManagementEventHandler
+namespace BWMS.WorkshopManagementEventHandler
 {
     public class Customer
     {

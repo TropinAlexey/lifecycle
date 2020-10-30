@@ -1,10 +1,10 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.BusinessRules
+namespace BWMS.WorkshopManagementAPI.Domain.BusinessRules
 {
     public static class MaintenanceJobRules
     {

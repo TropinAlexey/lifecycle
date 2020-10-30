@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Exceptions
+namespace BWMS.WorkshopManagementAPI.Domain.Exceptions
 {
     public class MaintenanceJobNotFoundException : Exception
     {

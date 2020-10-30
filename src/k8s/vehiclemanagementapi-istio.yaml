@@ -5,7 +5,7 @@ metadata:
     app: vehiclemanagementapi
     version: "1.0"
   name: vehiclemanagementapi
-  namespace: pitstop
+  namespace: BWMS
 spec:
   replicas: 1
   selector:
@@ -39,7 +39,7 @@ metadata:
   labels:
     app: vehiclemanagementapi
   name: vehiclemanagementapi
-  namespace: pitstop
+  namespace: BWMS
 spec:
   type: NodePort
   ports:

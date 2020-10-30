@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.WorkshopManagementAPI.Repositories.Model
+namespace BWMS.WorkshopManagementAPI.Repositories.Model
 {
     public class Aggregate
     {

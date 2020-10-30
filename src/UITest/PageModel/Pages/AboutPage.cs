@@ -1,13 +1,13 @@
 using OpenQA.Selenium;
 
-namespace Pitstop.UITest.PageModel.Pages
+namespace BWMS.UITest.PageModel.Pages
 {
     /// <summary>
     /// Represents the About page.
     /// </summary>
-    public class AboutPage : PitstopPage
+    public class AboutPage : MainPage
     {
-        public AboutPage(PitstopApp pitstop) : base("About Pitstop", pitstop)
+        public AboutPage(App app) : base("About Pitstop", app)
         {
         }
     }

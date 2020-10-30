@@ -1,5 +1,5 @@
 # Pitstop.Infrastructure.Messaging library
-This library contains helper-classes for working with messaging within the Pitstop sample solution. It contains the following items:
+This library contains helper-classes for working with messaging within the BWMS sample solution. It contains the following items:
 
 - The base-classes for Commands and Events.
 - Interfaces that abstract functionality to publish and consume messages using a message-broker. 

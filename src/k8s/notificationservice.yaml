@@ -5,7 +5,7 @@ metadata:
     app: notificationservice
     version: "1.0"
   name: notificationservice
-  namespace: pitstop
+  namespace: BWMS
 spec:
   replicas: 1
   selector:

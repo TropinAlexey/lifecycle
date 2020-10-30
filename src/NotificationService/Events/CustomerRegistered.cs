@@ -1,9 +1,9 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pitstop.NotificationService.Events
+namespace BWMS.NotificationService.Events
 {
     public class CustomerRegistered : Event
     {

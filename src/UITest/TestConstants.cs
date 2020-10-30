@@ -1,6 +1,6 @@
 using System;
 
-namespace Pitstop.UITest
+namespace BWMS.UITest
 {
     public static class TestConstants
     {

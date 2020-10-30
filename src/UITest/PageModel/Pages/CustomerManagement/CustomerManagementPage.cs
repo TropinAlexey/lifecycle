@@ -1,20 +1,20 @@
 using OpenQA.Selenium;
 
-namespace Pitstop.UITest.PageModel.Pages.CustomerManagement
+namespace BWMS.UITest.PageModel.Pages.CustomerManagement
 {
     /// <summary>
     /// Represents the CustomerManagement page.
     /// </summary>
-    public class CustomerManagementPage : PitstopPage
+    public class CustomerManagementPage : MainPage
     {
-        public CustomerManagementPage(PitstopApp pitstop) : base("Customer Management - overview", pitstop)
+        public CustomerManagementPage(App app) : base("Customer Management - overview", app)
         {
         }
 
         public RegisterCustomerPage RegisterCustomer()
         {
             WebDriver.FindElement(By.Id("RegisterCustomerButton")).Click();
-            return new RegisterCustomerPage(Pitstop);
+            return new RegisterCustomerPage(BWMS);
         }
 
         public CustomerDetailsPage SelectCustomer(string customerName)
@@ -22,7 +22,7 @@ namespace Pitstop.UITest.PageModel.Pages.CustomerManagement
             WebDriver
                 .FindElement(By.XPath($"//td[contains(text(),'{customerName}')]"))
                 .Click();
-            return new CustomerDetailsPage(Pitstop); 
+            return new CustomerDetailsPage(BWMS); 
         }
     }
 }
