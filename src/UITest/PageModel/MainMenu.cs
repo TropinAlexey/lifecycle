@@ -8,9 +8,9 @@ namespace BWMS.UITest.PageModel
 {
     public class MainMenu
     {
-        private readonly BWMS _app;
+        private readonly App _app;
 
-        public MainMenu(BWMS app)
+        public MainMenu(App app)
         {
             _app = app;
         }
