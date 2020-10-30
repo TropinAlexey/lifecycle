@@ -33,13 +33,13 @@ namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
         public WorkshopManagementPage Submit()
         {
             WebDriver.FindElement(By.Id("SubmitButton")).Click();
-            return new WorkshopManagementPage(BWMS);
+            return new WorkshopManagementPage(App);
         }
 
         public WorkshopManagementPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new WorkshopManagementPage(BWMS);
+            return new WorkshopManagementPage(App);
         }
     }
 }

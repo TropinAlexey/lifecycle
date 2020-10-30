@@ -7,7 +7,7 @@ namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
     /// <summary>
     /// Represents the WorkshopManagement page.
     /// </summary>
-    public class WorkshopManagementPage : PitstopPage
+    public class WorkshopManagementPage : MainPage
     {
         public WorkshopManagementPage(App app) : base("Workshop Management - overview", app)
         {
@@ -16,7 +16,7 @@ namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
         public RegisterMaintenanceJobPage RegisterMaintenanceJob()
         {
             WebDriver.FindElement(By.Id("RegisterMaintenanceJobButton")).Click();
-            return new RegisterMaintenanceJobPage(BWMS);
+            return new RegisterMaintenanceJobPage(App);
         }
 
         public MaintenanceJobDetailsPage SelectMaintenanceJob(string jobDescription)
@@ -24,7 +24,7 @@ namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
             WebDriver
                 .FindElement(By.XPath($"//td[contains(text(),'{jobDescription}')]"))
                 .Click();
-            return new MaintenanceJobDetailsPage(BWMS); 
+            return new MaintenanceJobDetailsPage(App); 
         }
     }
 }

@@ -14,7 +14,7 @@ namespace BWMS.UITest.PageModel.Pages.CustomerManagement
         public CustomerManagementPage Back()
         {
             WebDriver.FindElement(By.Id("BackButton")).Click();
-            return new CustomerManagementPage(BWMS);
+            return new CustomerManagementPage(App);
         }
     }
 }

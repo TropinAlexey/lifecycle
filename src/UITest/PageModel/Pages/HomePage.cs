@@ -7,7 +7,7 @@ namespace BWMS.UITest.PageModel.Pages
     /// </summary>
     public class HomePage : MainPage
     {
-        public HomePage(App app) : base("Lifecycle - Bike Workshop Management System"", app)
+        public HomePage(App app) : base("Lifecycle - Bike Workshop Management System", app)
         {
         }
     }
