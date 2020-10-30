@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Events;
-using Pitstop.WorkshopManagementAPI.DTOs;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Events;
+using BWMS.WorkshopManagementAPI.DTOs;
 
-namespace Pitstop.WorkshopManagementAPI.Mappers
+namespace BWMS.WorkshopManagementAPI.Mappers
 {
     public static class Mappers
     {
@@ -52,7 +52,7 @@ namespace Pitstop.WorkshopManagementAPI.Mappers
         public static VehicleDTO MapToDTO(this Vehicle source) =>
             new VehicleDTO
             {
-                LicenseNumber = source.Id.Value,
+                Name = source.Id.Value,
                 Brand = source.Brand,
                 Type = source.Type
             };

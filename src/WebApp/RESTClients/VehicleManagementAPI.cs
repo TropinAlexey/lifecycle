@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Pitstop.Models;
+using BWMS.Models;
 using Microsoft.AspNetCore.Hosting;
 using Refit;
 using WebApp.Commands;
@@ -26,11 +26,11 @@ namespace WebApp.RESTClients
         {
             return await _restClient.GetVehicles();
         }
-        public async Task<Vehicle> GetVehicleByLicenseNumber([AliasAs("id")] string licenseNumber)
+        public async Task<Vehicle> GetVehicleByName([AliasAs("id")] string Name)
         {
             try
             {
-                return await _restClient.GetVehicleByLicenseNumber(licenseNumber);
+                return await _restClient.GetVehicleByName(Name);
             }
             catch (ApiException ex)
             {

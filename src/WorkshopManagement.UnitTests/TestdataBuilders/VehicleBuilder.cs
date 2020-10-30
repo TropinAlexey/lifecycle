@@ -1,7 +1,7 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
 using TestUtils;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
 namespace WorkshopManagement.UnitTests.TestdataBuilders
 {
@@ -9,7 +9,7 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
     {
         private Random _rnd;
 
-        public LicenseNumber LicenseNumber { get; private set; }
+        public Name Name { get; private set; }
         public string Brand { get; private set; }
         public string Type { get; private set; }
         public string OwnerId { get; private set; }
@@ -20,15 +20,15 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
             SetDefaults();
         }
 
-        public VehicleBuilder WithLicenseNumber(string licenseNumber)
+        public VehicleBuilder WithName(string Name)
         {
-            LicenseNumber = LicenseNumber.Create(licenseNumber);
+            Name = Name.Create(Name);
             return this;
         }
 
-        public VehicleBuilder WithRandomLicenseNumber()
+        public VehicleBuilder WithRandomName()
         {
-            LicenseNumber = LicenseNumber.Create(TestDataGenerators.GenerateRandomLicenseNumber());
+            Name = Name.Create(TestDataGenerators.GenerateRandomName());
             return this;
         }        
 
@@ -56,12 +56,12 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
             {
                 throw new InvalidOperationException("You must specify an owner id using the 'WithOwnerId' method.");
             }
-            return new Vehicle(LicenseNumber, Brand, Type, OwnerId);
+            return new Vehicle(Name, Brand, Type, OwnerId);
         }
 
         private void SetDefaults()
         {
-            LicenseNumber = LicenseNumber.Create(TestDataGenerators.GenerateRandomLicenseNumber());
+            Name = Name.Create(TestDataGenerators.GenerateRandomName());
             Brand = "Volkswagen";
             Type = "Tiguan";
         }

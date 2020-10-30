@@ -1,6 +1,6 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 using Xunit;
 
 namespace WorkshopManagement.UnitTests.DomainTests
@@ -8,17 +8,17 @@ namespace WorkshopManagement.UnitTests.DomainTests
     public class ValueObjectsTest
     {
         [Fact]
-        public void Creating_A_LicenseNumber_With_An_Invalid_Format_Should_Throw_Exception()
+        public void Creating_A_Name_With_An_Invalid_Format_Should_Throw_Exception()
         {
             // arrange
-            string licenseNumber = "123456";
+            string Name = "123456";
 
             // act
             var thrownException =
-                Assert.Throws<InvalidValueException>(() => LicenseNumber.Create(licenseNumber));
+                Assert.Throws<InvalidValueException>(() => Name.Create(Name));
 
             // assert
-            Assert.Equal($"The specified license-number '{licenseNumber}' was not in the correct format.",
+            Assert.Equal($"The specified license-number '{Name}' was not in the correct format.",
                 thrownException.Message);
         }    
 

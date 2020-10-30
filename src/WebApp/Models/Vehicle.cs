@@ -4,24 +4,23 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Pitstop.Models
+namespace BWMS.Models
 {
     public class Vehicle
     {
         [Required]
-        [Display(Name = "License number")]
-        [RegularExpression(@"^((\d{1,3}|[a-zA-Z]{1,3})-){2}(\d{1,3}|[a-zA-Z]{1,3})$", ErrorMessage = "LicenseNumber is not in a valid format.")]
-        public string LicenseNumber { get; set; }
+        [Display(Name = "Give a name for your bike")]
+        public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Brand")]
+        [Display(Name = "What brand?")]
         public string Brand { get; set; }
 
         [Required]
-        [Display(Name = "Type")]
+        [Display(Name = "What type?")]
         public string Type { get; set; }
 
-        [Display(Name = "Owner")]
+        [Display(Name = "Who are it's owner?")]
         public string OwnerId { get; set; }
     }
 }

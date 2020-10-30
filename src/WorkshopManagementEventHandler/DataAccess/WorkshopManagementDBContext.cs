@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pitstop.WorkshopManagementEventHandler.Model;
+using BWMS.WorkshopManagementEventHandler.Model;
 
-namespace Pitstop.WorkshopManagementEventHandler.DataAccess
+namespace BWMS.WorkshopManagementEventHandler.DataAccess
 {
     public class WorkshopManagementDBContext : DbContext
     {
@@ -17,7 +17,7 @@ namespace Pitstop.WorkshopManagementEventHandler.DataAccess
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Vehicle>().HasKey(entity => entity.LicenseNumber);
+            builder.Entity<Vehicle>().HasKey(entity => entity.Name);
             builder.Entity<Vehicle>().ToTable("Vehicle");
 
             builder.Entity<Customer>().HasKey(entity => entity.CustomerId);

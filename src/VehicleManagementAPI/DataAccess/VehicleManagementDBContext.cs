@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Pitstop.Application.VehicleManagement.Model;
+using BWMS.Application.VehicleManagement.Model;
 using Polly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pitstop.Application.VehicleManagement.DataAccess
+namespace BWMS.Application.VehicleManagement.DataAccess
 {
     public class VehicleManagementDBContext : DbContext
     {
@@ -19,7 +19,7 @@ namespace Pitstop.Application.VehicleManagement.DataAccess
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Vehicle>().HasKey(m => m.LicenseNumber);
+            builder.Entity<Vehicle>().HasKey(m => m.Name);
             builder.Entity<Vehicle>().ToTable("Vehicle");
             base.OnModelCreating(builder);
         }

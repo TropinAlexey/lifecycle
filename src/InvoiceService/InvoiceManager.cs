@@ -90,14 +90,14 @@ namespace Pitstop.InvoiceService
 
         private async Task HandleAsync(MaintenanceJobPlanned mjp)
         {
-            Log.Information("Register Maintenance Job: {Id}, {Description}, {CustomerId}, {VehicleLicenseNumber}", 
-                mjp.JobId, mjp.Description, mjp.CustomerInfo.Id, mjp.VehicleInfo.LicenseNumber);
+            Log.Information("Register Maintenance Job: {Id}, {Description}, {CustomerId}, {VehicleName}", 
+                mjp.JobId, mjp.Description, mjp.CustomerInfo.Id, mjp.VehicleInfo.Name);
 
             MaintenanceJob job = new MaintenanceJob
             {
                 JobId = mjp.JobId.ToString(),
                 CustomerId = mjp.CustomerInfo.Id,
-                LicenseNumber = mjp.VehicleInfo.LicenseNumber,
+                Name = mjp.VehicleInfo.Name,
                 Description = mjp.Description
             };
 
@@ -135,7 +135,7 @@ namespace Pitstop.InvoiceService
                     TimeSpan duration = job.EndTime.Value.Subtract(job.StartTime.Value);
                     decimal amount = Math.Round((decimal)duration.TotalHours * HOURLY_RATE, 2);
                     totalAmount += amount;
-                    specification.AppendLine($"{job.EndTime.Value.ToString("dd-MM-yyyy")} : {job.Description} on vehicle with license {job.LicenseNumber} - Duration: {duration.TotalHours} hour - Amount: &euro; {amount}");
+                    specification.AppendLine($"{job.EndTime.Value.ToString("dd-MM-yyyy")} : {job.Description} on vehicle with license {job.Name} - Duration: {duration.TotalHours} hour - Amount: &euro; {amount}");
                 }
                 invoice.Specification = specification.ToString();
                 invoice.Amount = totalAmount;

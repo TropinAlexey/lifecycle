@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dapper;
-using Pitstop.NotificationService.Model;
+using BWMS.NotificationService.Model;
 using Polly;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using Serilog;
 
-namespace Pitstop.NotificationService.Repositories
+namespace BWMS.NotificationService.Repositories
 {
     public class SqlServerNotificationRepository : INotificationRepository
     {
@@ -54,7 +54,7 @@ namespace Pitstop.NotificationService.Repositories
                       "IF OBJECT_ID('MaintenanceJob') IS NULL " +
                       "CREATE TABLE MaintenanceJob (" +
                       "  JobId varchar(50) NOT NULL," +
-                      "  LicenseNumber varchar(50) NOT NULL," +
+                      "  Name varchar(50) NOT NULL," +
                       "  CustomerId varchar(50) NOT NULL," +
                       "  StartTime datetime2 NOT NULL," +
                       "  Description varchar(250) NOT NULL," +
@@ -78,8 +78,8 @@ namespace Pitstop.NotificationService.Repositories
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 string sql =
-                    "insert into MaintenanceJob(JobId, LicenseNumber, CustomerId, StartTime, Description) " +
-                    "values(@JobId, @LicenseNumber, @CustomerId, @StartTime, @Description);";
+                    "insert into MaintenanceJob(JobId, Name, CustomerId, StartTime, Description) " +
+                    "values(@JobId, @Name, @CustomerId, @StartTime, @Description);";
                 await conn.ExecuteAsync(sql, job);
             }
         }

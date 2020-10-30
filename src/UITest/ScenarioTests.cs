@@ -1,10 +1,10 @@
 using System;
 using Xunit;
 using Xunit.Abstractions;
-using Pitstop.UITest.PageModel;
+using BWMS.UITest.PageModel;
 using TestUtils;
 
-namespace Pitstop.UITest
+namespace BWMS.UITest
 {
     public class ScenarioTests
     {
@@ -20,12 +20,12 @@ namespace Pitstop.UITest
         {
             // arrange
             string testrunId = Guid.NewGuid().ToString("N");
-            PitstopApp pitstop = new PitstopApp(testrunId, TestConstants.PitstopStartUrl);
-            var homePage = pitstop.Start();
-            string licenseNumber = TestDataGenerators.GenerateRandomLicenseNumber();
+            App app = new App(testrunId, TestConstants.BWMSStartUrl);
+            var homePage = BWMS.Start();
+            string Name = TestDataGenerators.GenerateRandomName();
 
             // act
-            pitstop.Menu
+            BWMS.Menu
                 .CustomerManagement()
                 .RegisterCustomer()
                 .Cancel()
@@ -37,27 +37,27 @@ namespace Pitstop.UITest
                 .SelectCustomer($"TestCustomer {testrunId}")
                 .Back();
 
-            pitstop.Menu
+            BWMS.Menu
                 .VehicleManagement()
                 .RegisterVehicle()
                 .Cancel()
                 .RegisterVehicle()
-                .FillVehicleDetails(licenseNumber, "Testla", "Model T", $"TestCustomer {testrunId}")
+                .FillVehicleDetails(Name, "Testla", "Model T", $"TestCustomer {testrunId}")
                 .Submit()
-                .SelectVehicle(licenseNumber)
+                .SelectVehicle(Name)
                 .Back(); 
 
-            pitstop.Menu
+            BWMS.Menu
                 .WorkshopManagement()
                 .RegisterMaintenanceJob()
                 .Cancel()
                 .RegisterMaintenanceJob()
-                .FillJobDetails("08:00", "12:00", $"Job {testrunId}", licenseNumber)
+                .FillJobDetails("08:00", "12:00", $"Job {testrunId}", Name)
                 .Submit()
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .Back(); 
 
-            pitstop.Menu
+            BWMS.Menu
                 .WorkshopManagement()
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .GetJobStatus(out string beforeJobStatus)
@@ -72,7 +72,7 @@ namespace Pitstop.UITest
             Assert.Equal("Completed", afterJobStatus);
 
             // cleanup
-            pitstop.Stop();
+            BWMS.Stop();
         }
     }
 }

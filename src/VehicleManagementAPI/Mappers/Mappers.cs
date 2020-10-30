@@ -1,13 +1,13 @@
-using Pitstop.Application.VehicleManagement.Commands;
-using Pitstop.Application.VehicleManagement.Model;
+using BWMS.Application.VehicleManagement.Commands;
+using BWMS.Application.VehicleManagement.Model;
 
-namespace Pitstop.VehicleManagementAPI.Mappers
+namespace BWMS.VehicleManagementAPI.Mappers
 {
     public static class Mappers
     {
         public static Vehicle MapToVehicle(this RegisterVehicle command) => new Vehicle
         {
-            LicenseNumber = command.LicenseNumber,
+            Name = command.Name,
             Brand = command.Brand,
             Type = command.Type,
             OwnerId = command.OwnerId

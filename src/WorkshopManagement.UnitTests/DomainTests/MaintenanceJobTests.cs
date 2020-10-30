@@ -1,8 +1,8 @@
 using System;
 using Xunit;
 using WorkshopManagement.UnitTests.TestdataBuilders;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
 namespace WorkshopManagement.UnitTests.DomainTests
 {
@@ -26,7 +26,7 @@ namespace WorkshopManagement.UnitTests.DomainTests
             Assert.Equal(maintenanceJobBuilder.CustomerBuilder.Id, sut.Customer.Id);
             Assert.Equal(maintenanceJobBuilder.CustomerBuilder.Name, sut.Customer.Name);
             Assert.Equal(maintenanceJobBuilder.CustomerBuilder.TelephoneNumber, sut.Customer.TelephoneNumber);
-            Assert.Equal(maintenanceJobBuilder.VehicleBuilder.LicenseNumber, sut.Vehicle.Id);
+            Assert.Equal(maintenanceJobBuilder.VehicleBuilder.Name, sut.Vehicle.Id);
             Assert.Equal(maintenanceJobBuilder.VehicleBuilder.Brand, sut.Vehicle.Brand);
             Assert.Equal(maintenanceJobBuilder.VehicleBuilder.Type, sut.Vehicle.Type);
             Assert.Equal(maintenanceJobBuilder.VehicleBuilder.OwnerId, sut.Vehicle.OwnerId);
@@ -59,7 +59,7 @@ namespace WorkshopManagement.UnitTests.DomainTests
             Assert.Equal(maintenanceJobBuilder.CustomerBuilder.Id, sut.Customer.Id);
             Assert.Equal(maintenanceJobBuilder.CustomerBuilder.Name, sut.Customer.Name);
             Assert.Equal(maintenanceJobBuilder.CustomerBuilder.TelephoneNumber, sut.Customer.TelephoneNumber);
-            Assert.Equal(maintenanceJobBuilder.VehicleBuilder.LicenseNumber, sut.Vehicle.Id);
+            Assert.Equal(maintenanceJobBuilder.VehicleBuilder.Name, sut.Vehicle.Id);
             Assert.Equal(maintenanceJobBuilder.VehicleBuilder.Brand, sut.Vehicle.Brand);
             Assert.Equal(maintenanceJobBuilder.VehicleBuilder.Type, sut.Vehicle.Type);
             Assert.Equal(maintenanceJobBuilder.VehicleBuilder.OwnerId, sut.Vehicle.OwnerId);

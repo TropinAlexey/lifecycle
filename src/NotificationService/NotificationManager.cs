@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Linq;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.NotificationService.Events;
-using Pitstop.NotificationService.Model;
-using Pitstop.NotificationService.NotificationChannels;
-using Pitstop.NotificationService.Repositories;
+using BWMS.Infrastructure.Messaging;
+using BWMS.NotificationService.Events;
+using BWMS.NotificationService.Model;
+using BWMS.NotificationService.NotificationChannels;
+using BWMS.NotificationService.Repositories;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Pitstop.NotificationService
+namespace BWMS.NotificationService
 {
     public class NotificationManager : IHostedService, IMessageHandlerCallback
     {
@@ -93,13 +93,13 @@ namespace Pitstop.NotificationService
             {
                 JobId = mjp.JobId.ToString(),
                 CustomerId = mjp.CustomerInfo.Id,
-                LicenseNumber = mjp.VehicleInfo.LicenseNumber,
+                Name = mjp.VehicleInfo.Name,
                 StartTime = mjp.StartTime,
                 Description = mjp.Description
             };
 
-            Log.Information("Register Maintenance Job: {Id}, {CustomerId}, {VehicleLicenseNumber}, {StartTime}, {Description}", 
-                job.JobId, job.CustomerId, job.LicenseNumber, job.StartTime, job.Description);
+            Log.Information("Register Maintenance Job: {Id}, {CustomerId}, {Name}, {StartTime}, {Description}", 
+                job.JobId, job.CustomerId, job.Name, job.StartTime, job.Description);
 
             await _repo.RegisterMaintenanceJobAsync(job);
         }
@@ -127,19 +127,19 @@ namespace Pitstop.NotificationService
                 foreach (MaintenanceJob job in jobsPerCustomer)
                 {
                     body.AppendLine($"- {job.StartTime.ToString("dd-MM-yyyy")} at {job.StartTime.ToString("HH:mm")} : " +
-                        $"{job.Description} on vehicle with license-number {job.LicenseNumber}");
+                        $"{job.Description} on vehicle with license-number {job.Name}");
                 }
 
                 body.AppendLine($"\nPlease make sure you're present at least 10 minutes before the (first) job is planned.");
                 body.AppendLine($"Once arrived, you can notify your arrival at our front-desk.\n");
                 body.AppendLine($"Greetings,\n");
-                body.AppendLine($"The PitStop crew");
+                body.AppendLine($"The Lifecycle crew");
 
                 Log.Information("Sent notification to: {CustomerName}", customer.Name);
 
                 // send notification
                 await _emailNotifier.SendEmailAsync(
-                    customer.EmailAddress, "noreply@pitstop.nl", "Vehicle maintenance reminder", body.ToString());
+                    customer.EmailAddress, "lifecyce.kyiv@gmail.com", "Vehicle maintenance reminder", body.ToString());
 
                 // remove jobs for which a notification was sent
                 await _repo.RemoveMaintenanceJobsAsync(jobsPerCustomer.Select(job => job.JobId));

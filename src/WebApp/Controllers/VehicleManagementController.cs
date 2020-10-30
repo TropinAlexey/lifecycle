@@ -1,15 +1,15 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pitstop.Models;
-using Pitstop.ViewModels;
+using BWMS.Models;
+using BWMS.ViewModels;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApp.Commands;
 using WebApp.RESTClients;
-using Pitstop.WebApp.Mappers;
+using BWMS.WebApp.Mappers;
 
-namespace PitStop.Controllers
+namespace BWMS.Controllers
 {
     public class VehicleManagementController : Controller
     {
@@ -41,11 +41,11 @@ namespace PitStop.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Details(string licenseNumber)
+        public async Task<IActionResult> Details(string Name)
         {
             return await _resiliencyHelper.ExecuteResilient(async () =>
             {
-                Vehicle vehicle = await _vehicleManagementAPI.GetVehicleByLicenseNumber(licenseNumber);
+                Vehicle vehicle = await _vehicleManagementAPI.GetVehicleByName(Name);
                 Customer customer = await _customerManagementAPI.GetCustomerById(vehicle.OwnerId);
 
                 var model = new VehicleManagementDetailsViewModel

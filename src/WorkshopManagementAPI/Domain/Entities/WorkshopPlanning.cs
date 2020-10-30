@@ -1,16 +1,16 @@
-﻿using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.BusinessRules;
-using Pitstop.WorkshopManagementAPI.Domain.Core;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
-using Pitstop.WorkshopManagementAPI.Events;
-using Pitstop.WorkshopManagementAPI.Mappers;
+﻿using BWMS.Infrastructure.Messaging;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.BusinessRules;
+using BWMS.WorkshopManagementAPI.Domain.Core;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Events;
+using BWMS.WorkshopManagementAPI.Mappers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Entities
+namespace BWMS.WorkshopManagementAPI.Domain.Entities
 {
     public class WorkshopPlanning : AggregateRoot<WorkshopPlanningId>
     {
@@ -83,8 +83,8 @@ namespace Pitstop.WorkshopManagementAPI.Domain.Entities
         {
             MaintenanceJob job = new MaintenanceJob(e.JobId);
             Customer customer = new Customer(e.CustomerInfo.Id, e.CustomerInfo.Name, e.CustomerInfo.TelephoneNumber);
-            LicenseNumber licenseNumber = LicenseNumber.Create(e.VehicleInfo.LicenseNumber);
-            Vehicle vehicle = new Vehicle(licenseNumber, e.VehicleInfo.Brand, e.VehicleInfo.Type, customer.Id);
+            Name Name = Name.Create(e.VehicleInfo.Name);
+            Vehicle vehicle = new Vehicle(Name, e.VehicleInfo.Brand, e.VehicleInfo.Type, customer.Id);
             Timeslot plannedTimeslot = Timeslot.Create(e.StartTime, e.EndTime);
             job.Plan(plannedTimeslot, vehicle, customer, e.Description);
             Jobs.Add(job);

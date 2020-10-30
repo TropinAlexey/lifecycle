@@ -122,12 +122,12 @@ namespace PitStop.Controllers
                         // register maintenance job
                         DateTime startTime = inputModel.Date.Add(inputModel.StartTime.TimeOfDay);
                         DateTime endTime = inputModel.Date.Add(inputModel.EndTime.TimeOfDay);
-                        Vehicle vehicle = await _workshopManagementAPI.GetVehicleByLicenseNumber(inputModel.SelectedVehicleLicenseNumber);
+                        Vehicle vehicle = await _workshopManagementAPI.GetVehicleByName(inputModel.SelectedName);
                         Customer customer = await _workshopManagementAPI.GetCustomerById(vehicle.OwnerId);
 
                         PlanMaintenanceJob planMaintenanceJobCommand = new PlanMaintenanceJob(Guid.NewGuid(), Guid.NewGuid(), startTime, endTime,
                             (customer.CustomerId, customer.Name, customer.TelephoneNumber),
-                            (vehicle.LicenseNumber, vehicle.Brand, vehicle.Type), inputModel.Description);
+                            (vehicle.Name, vehicle.Brand, vehicle.Type), inputModel.Description);
                         await _workshopManagementAPI.PlanMaintenanceJob(dateStr, planMaintenanceJobCommand);
                     }
                     catch (ApiException ex)
@@ -192,8 +192,8 @@ namespace PitStop.Controllers
             return vehicles.Select(v =>
                 new SelectListItem
                 {
-                    Value = v.LicenseNumber,
-                    Text = $"{v.Brand} {v.Type} [{v.LicenseNumber}]"
+                    Value = v.BikeName,
+                    Text = $"{v.Brand} {v.Type} [{v.BikeName}]"
                 });
         }
     }

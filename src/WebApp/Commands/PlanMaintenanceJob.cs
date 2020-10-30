@@ -1,4 +1,4 @@
-﻿using Pitstop.Infrastructure.Messaging;
+﻿using BWMS.Infrastructure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,12 +11,12 @@ namespace WebApp.Commands
         public readonly DateTime StartTime;
         public readonly DateTime EndTime;
         public readonly (string Id, string Name, string TelephoneNumber) CustomerInfo;
-        public readonly (string LicenseNumber, string Brand, string Type) VehicleInfo;
+        public readonly (string Name, string Brand, string Type) VehicleInfo;
         public readonly string Description;
 
         public PlanMaintenanceJob(Guid messageId, Guid jobId, DateTime startTime, DateTime endTime,
             (string Id, string Name, string TelephoneNumber) customerInfo,
-            (string LicenseNumber, string Brand, string Type) vehicleInfo,
+            (string Name, string Brand, string Type) vehicleInfo,
             string description) : base(messageId)
         {
             JobId = jobId;

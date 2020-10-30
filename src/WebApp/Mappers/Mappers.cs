@@ -1,8 +1,8 @@
 using System;
-using Pitstop.ViewModels;
+using BWMS.ViewModels;
 using WebApp.Commands;
 
-namespace Pitstop.WebApp.Mappers
+namespace BWMS.WebApp.Mappers
 {
     public static class Mappers
     {
@@ -20,7 +20,7 @@ namespace Pitstop.WebApp.Mappers
 
         public static RegisterVehicle MapToRegisterVehicle(this VehicleManagementNewViewModel source) => new RegisterVehicle(
             Guid.NewGuid(),
-            source.Vehicle.LicenseNumber,
+            source.Vehicle.Name,
             source.Vehicle.Brand,
             source.Vehicle.Type,
             source.SelectedCustomerId

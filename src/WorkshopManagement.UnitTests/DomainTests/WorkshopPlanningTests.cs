@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Pitstop.Infrastructure.Messaging;
-using Pitstop.WorkshopManagementAPI.Commands;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Domain.Exceptions;
-using Pitstop.WorkshopManagementAPI.Events;
+using BWMS.Infrastructure.Messaging;
+using BWMS.WorkshopManagementAPI.Commands;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.Exceptions;
+using BWMS.WorkshopManagementAPI.Events;
 using WorkshopManagement.UnitTests.TestdataBuilders;
 using Xunit;
 
@@ -65,7 +65,7 @@ namespace WorkshopManagement.UnitTests.DomainTests
                     Assert.Equal(command.CustomerInfo.Id, item0.Customer.Id);
                     Assert.Equal(command.CustomerInfo.Name, item0.Customer.Name);
                     Assert.Equal(command.CustomerInfo.TelephoneNumber, item0.Customer.TelephoneNumber);
-                    Assert.Equal(command.VehicleInfo.LicenseNumber, item0.Vehicle.Id);
+                    Assert.Equal(command.VehicleInfo.Name, item0.Vehicle.Id);
                     Assert.Equal(command.VehicleInfo.Brand, item0.Vehicle.Brand);
                     Assert.Equal(command.VehicleInfo.Type, item0.Vehicle.Type);
                     Assert.Equal(command.CustomerInfo.Id, item0.Vehicle.OwnerId);
@@ -116,11 +116,11 @@ namespace WorkshopManagement.UnitTests.DomainTests
                 .WithVehicleBuilder(vehicleBuilder);
 
             PlanMaintenanceJob command1 = commandBuilder.Build();
-            vehicleBuilder.WithRandomLicenseNumber();
+            vehicleBuilder.WithRandomName();
             PlanMaintenanceJob command2 = commandBuilder.Build();
-            vehicleBuilder.WithRandomLicenseNumber();
+            vehicleBuilder.WithRandomName();
             PlanMaintenanceJob command3 = commandBuilder.Build();
-            vehicleBuilder.WithRandomLicenseNumber();
+            vehicleBuilder.WithRandomName();
             PlanMaintenanceJob command4 = commandBuilder.Build();
 
             // act

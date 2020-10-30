@@ -1,6 +1,6 @@
 using System;
-using Pitstop.WorkshopManagementAPI.Domain.Entities;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+using BWMS.WorkshopManagementAPI.Domain.Entities;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
 namespace WorkshopManagement.UnitTests.TestdataBuilders
 {
@@ -58,7 +58,7 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
         public MaintenanceJobBuilder WithVehicle(Vehicle vehicle)
         {
             VehicleBuilder
-                .WithLicenseNumber(vehicle.Id)
+                .WithName(vehicle.Id)
                 .WithBrand(vehicle.Brand)
                 .WithType(vehicle.Type)
                 .WithOwnerId(vehicle.OwnerId);

@@ -1,15 +1,15 @@
-﻿using Pitstop.WorkshopManagementAPI.Domain.Core;
-using Pitstop.WorkshopManagementAPI.Domain.ValueObjects;
+﻿using BWMS.WorkshopManagementAPI.Domain.Core;
+using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 
-namespace Pitstop.WorkshopManagementAPI.Domain.Entities
+namespace BWMS.WorkshopManagementAPI.Domain.Entities
 {
-    public class Vehicle : Entity<LicenseNumber>
+    public class Vehicle : Entity<Name>
     {
         public string Brand { get; private set; }
         public string Type { get; private set; }
         public string OwnerId { get; private set; }
 
-        public Vehicle(LicenseNumber licenseNumber, string brand, string type, string ownerId) : base(licenseNumber)
+        public Vehicle(Name Name, string brand, string type, string ownerId) : base(Name)
         {
             Brand = brand;
             Type = type;
