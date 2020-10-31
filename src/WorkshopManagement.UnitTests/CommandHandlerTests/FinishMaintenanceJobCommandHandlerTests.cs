@@ -1,3 +1,4 @@
+using System.Net;
 using System;
 using System.Collections.Generic;
 using Pitstop.Infrastructure.Messaging;
@@ -20,7 +21,7 @@ namespace WorkshopManagement.UnitTests.CommandHandlerTests
         {
             // arrange
             DateTime date = DateTime.Today;
-            string workshopPlanningId = date.ToString("yyyy-MM-dd");
+            string workshopPlanningId = date.ToString("yyy-MM-dd");
             Guid jobId = Guid.NewGuid();
             DateTime startTime = date.AddHours(8);
             DateTime endTime = date.AddHours(11);

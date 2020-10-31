@@ -20,7 +20,7 @@ namespace WorkshopManagement.UnitTests.CommandHandlerTests
         public async void Given_An_Existing_Job_The_Handler_Should_Handle_The_Command()
         {
             // arrange
-            DateTime date = DateTime.Today;
+            DateTime date = DateTime.Now;
             var initializingEvents = new Event[] { 
                 new WorkshopPlanningCreatedEventBuilder().WithDate(date).Build() 
             };

@@ -20,15 +20,15 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
             SetDefaults();
         }
 
-        public VehicleBuilder WithName(string Name)
+        public VehicleBuilder WithName(string name)
         {
-            Name = Name.Create(Name);
+            Name = Name.Create(name);
             return this;
         }
 
         public VehicleBuilder WithRandomName()
         {
-            Name = Name.Create(TestDataGenerators.GenerateRandomName());
+            Name = Name.Create("Bike name");
             return this;
         }        
 
@@ -61,9 +61,9 @@ namespace WorkshopManagement.UnitTests.TestdataBuilders
 
         private void SetDefaults()
         {
-            Name = Name.Create(TestDataGenerators.GenerateRandomName());
-            Brand = "Volkswagen";
-            Type = "Tiguan";
+            Name = Name.Create("Мой ненаглядный велик");
+            Brand = "Comanche";
+            Type = "Street";
         }
     }
 }

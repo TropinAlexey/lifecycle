@@ -11,14 +11,13 @@ namespace WorkshopManagement.UnitTests.DomainTests
         public void Creating_A_Name_With_An_Invalid_Format_Should_Throw_Exception()
         {
             // arrange
-            string Name = "123456";
+            string name = "123456";
 
             // act
-            var thrownException =
-                Assert.Throws<InvalidValueException>(() => Name.Create(Name));
+            var thrownException = Assert.Throws<InvalidValueException>(() => Name.Create(name));
 
             // assert
-            Assert.Equal($"The specified license-number '{Name}' was not in the correct format.",
+            Assert.Equal($"The specified license-number '{name}' was not in the correct format.",
                 thrownException.Message);
         }    
 

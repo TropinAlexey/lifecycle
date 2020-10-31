@@ -6,9 +6,9 @@ using BWMS.WorkshopManagementAPI.Domain.Exceptions;
 using BWMS.WorkshopManagementAPI.Domain.ValueObjects;
 using BWMS.WorkshopManagementAPI.Events;
 using BWMS.WorkshopManagementAPI.Mappers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace BWMS.WorkshopManagementAPI.Domain.Entities
 {

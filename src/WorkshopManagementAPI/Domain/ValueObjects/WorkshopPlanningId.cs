@@ -1,3 +1,4 @@
+using Extensions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -7,12 +8,11 @@ namespace BWMS.WorkshopManagementAPI.Domain.ValueObjects
 {
     public class WorkshopPlanningId : ValueObject
     {
-        private const string DATE_FORMAT = "yyyy-MM-dd";
         public string Value { get; private set; }
 
         public static WorkshopPlanningId Create(DateTime date)
         {
-            return new WorkshopPlanningId { Value = date.ToString(DATE_FORMAT) };
+            return new WorkshopPlanningId { Value = date.ToString(ConfigurationExtension.GetDateFormat) };
         }
 
         protected override IEnumerable<object> GetAtomicValues()
@@ -22,6 +22,6 @@ namespace BWMS.WorkshopManagementAPI.Domain.ValueObjects
 
         public static implicit operator string(WorkshopPlanningId id) => id.Value;
         public static implicit operator DateTime(WorkshopPlanningId id) =>
-            DateTime.ParseExact(id.Value, DATE_FORMAT, CultureInfo.InvariantCulture);
+            DateTime.ParseExact(id.Value, ConfigurationExtension.GetDateFormat, CultureInfo.InvariantCulture);
     }
 }

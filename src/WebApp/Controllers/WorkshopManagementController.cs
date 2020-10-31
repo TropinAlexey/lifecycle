@@ -12,6 +12,7 @@ using WebApp.RESTClients;
 using Refit;
 using System.Net;
 using WebApp.Models;
+using Extensions;
 
 namespace BWMS.Controllers
 {
@@ -21,9 +22,9 @@ namespace BWMS.Controllers
         private readonly ILogger _logger;
         private ResiliencyHelper _resiliencyHelper;
 
-        public WorkshopManagementController(IWorkshopManagementAPI workshopManagamentAPI, ILogger<WorkshopManagementController> logger)
+        public WorkshopManagementController(IWorkshopManagementAPI workshopManagementAPI, ILogger<WorkshopManagementController> logger)
         {
-            _workshopManagementAPI = workshopManagamentAPI;
+            _workshopManagementAPI = workshopManagementAPI;
             _logger = logger;
             _resiliencyHelper = new ResiliencyHelper(_logger);
         }
@@ -45,7 +46,7 @@ namespace BWMS.Controllers
                 };
 
                 // get planning
-                string dateStr = planningDate.Value.ToString("yyyy-MM-dd");
+                string dateStr = planningDate.Value.ToString(ConfigurationExtension.GetDateFormat);
                 WorkshopPlanning planning = await _workshopManagementAPI.GetWorkshopPlanning(dateStr);
                 if (planning?.Jobs?.Count > 0)
                 {
@@ -61,7 +62,7 @@ namespace BWMS.Controllers
         {
             return await _resiliencyHelper.ExecuteResilient(async () =>
             {
-                string dateStr = planningDate.ToString("yyyy-MM-dd");
+                string dateStr = planningDate.ToString(ConfigurationExtension.GetDateFormat);
                 var model = new WorkshopManagementDetailsViewModel
                 {
                     Date = planningDate,
@@ -95,7 +96,7 @@ namespace BWMS.Controllers
         {
             return await _resiliencyHelper.ExecuteResilient(async () =>
             {
-                string dateStr = planningDate.ToString("yyyy-MM-dd");
+                string dateStr = planningDate.ToString(ConfigurationExtension.GetDateFormat);
                 MaintenanceJob job = await _workshopManagementAPI.GetMaintenanceJob(dateStr, jobId);
                 var model = new WorkshopManagementFinishViewModel
                 {
@@ -115,7 +116,7 @@ namespace BWMS.Controllers
             {
                 return await _resiliencyHelper.ExecuteResilient(async () =>
                 {
-                    string dateStr = inputModel.Date.ToString("yyyy-MM-dd");
+                    string dateStr = inputModel.Date.ToString(ConfigurationExtension.GetDateFormat);
                     
                     try
                     {
@@ -163,7 +164,7 @@ namespace BWMS.Controllers
             {
                 return await _resiliencyHelper.ExecuteResilient(async () =>
                 {
-                    string dateStr = inputModel.Date.ToString("yyyy-MM-dd");
+                    string dateStr = inputModel.Date.ToString(ConfigurationExtension.GetDateFormat);
                     DateTime actualStartTime = inputModel.Date.Add(inputModel.ActualStartTime.Value.TimeOfDay);
                     DateTime actualEndTime = inputModel.Date.Add(inputModel.ActualEndTime.Value.TimeOfDay);
 

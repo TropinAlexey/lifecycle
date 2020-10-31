@@ -12,10 +12,10 @@ namespace BWMS.WorkshopManagementEventHandler.Events
         public readonly string Type;
         public readonly string OwnerId;
 
-        public VehicleRegistered(Guid messageId, string Name, string brand, string type, string ownerId) : 
+        public VehicleRegistered(Guid messageId, string name, string brand, string type, string ownerId) : 
             base(messageId)
         {
-            Name = Name;
+            Name = name;
             Brand = brand;
             Type = type;
             OwnerId = ownerId;

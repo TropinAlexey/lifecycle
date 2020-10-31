@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Converters;
 using System.Data.SqlClient;
 using BWMS.WorkshopManagementAPI.Domain.Entities;
+using Extensions;
 
 namespace BWMS.WorkshopManagementAPI.Repositories
 {
@@ -50,7 +51,7 @@ namespace BWMS.WorkshopManagementAPI.Repositories
                  var aggregate = await conn
                         .QuerySingleOrDefaultAsync<Aggregate>(
                             "select * from WorkshopPlanning where Id = @Id", 
-                            new { Id = date.ToString("yyyy-MM-dd") });
+                            new { Id = date.ToString(ConfigurationExtension.GetDateFormat) });
                 
                 if (aggregate == null)
                 {
@@ -61,7 +62,7 @@ namespace BWMS.WorkshopManagementAPI.Repositories
                 IEnumerable<AggregateEvent> aggregateEvents = await conn
                     .QueryAsync<AggregateEvent>(
                         "select * from WorkshopPlanningEvent where Id = @Id order by [Version];",
-                        new { Id = date.ToString("yyyy-MM-dd") });
+                        new { Id = date.ToString(ConfigurationExtension.GetDateFormat) });
             
                 List<Event> events = new List<Event>();
                 foreach (var aggregateEvent in aggregateEvents)

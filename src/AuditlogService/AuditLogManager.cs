@@ -1,7 +1,6 @@
 ﻿using Pitstop.Infrastructure.Messaging;
 using System;
 using System.Threading.Tasks;
-using System.Reflection;
 using System.Text;
 using Newtonsoft.Json.Linq;
 using System.IO;
