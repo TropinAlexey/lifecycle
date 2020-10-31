@@ -8,14 +8,14 @@ namespace BWMS.UITest.PageModel.Pages.VehicleManagement
     /// </summary>
     public class VehicleDetailsPage : MainPage
     {        
-        public VehicleDetailsPage(PitstopApp pitstop) : base("Vehicle Management - details", pitstop)
+        public VehicleDetailsPage(App app) : base("Vehicle Management - details", app)
         {
         }
 
         public VehicleManagementPage Back()
         {
             WebDriver.FindElement(By.Id("BackButton")).Click();
-            return new VehicleManagementPage(BWMS);
+            return new VehicleManagementPage(App);
         }
     }
 }

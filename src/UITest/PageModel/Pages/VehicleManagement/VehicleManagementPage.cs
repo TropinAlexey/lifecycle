@@ -15,7 +15,7 @@ namespace BWMS.UITest.PageModel.Pages.VehicleManagement
         public RegisterVehiclePage RegisterVehicle()
         {
             WebDriver.FindElement(By.Id("RegisterVehicleButton")).Click();
-            return new RegisterVehiclePage(app);
+            return new RegisterVehiclePage(App);
         }
 
         public VehicleDetailsPage SelectVehicle(string Name)
@@ -23,7 +23,7 @@ namespace BWMS.UITest.PageModel.Pages.VehicleManagement
             WebDriver
                 .FindElement(By.XPath($"//td[contains(text(),'{Name}')]"))
                 .Click();
-            return new VehicleDetailsPage(app); 
+            return new VehicleDetailsPage(App); 
         }
     }
 }

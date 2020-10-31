@@ -10,7 +10,7 @@ namespace BWMS.UITest.PageModel.Pages
         public string Title { get; }
         public App App { get; }
 
-        public IWebDriver WebDriver => Pitstop.WebDriver;
+        public IWebDriver WebDriver => App.WebDriver;
 
 
         /// <summary>

@@ -30,13 +30,13 @@ namespace BWMS.UITest.PageModel.Pages.WorkshopManagement
         public MaintenanceJobDetailsPage Complete()
         {
             WebDriver.FindElement(By.Id("CompleteButton")).Click();
-            return new MaintenanceJobDetailsPage(BWMS);
+            return new MaintenanceJobDetailsPage(App);
         }
 
         public MaintenanceJobDetailsPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new MaintenanceJobDetailsPage(BWMS);
+            return new MaintenanceJobDetailsPage(App);
         }
     }
 }

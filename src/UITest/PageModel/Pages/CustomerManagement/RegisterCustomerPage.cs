@@ -7,7 +7,7 @@ namespace BWMS.UITest.PageModel.Pages.CustomerManagement
     /// </summary>
     public class RegisterCustomerPage : MainPage
     {   
-        public RegisterCustomerPage(App pitstop) : base("Who are you? Let us know", app)
+        public RegisterCustomerPage(App app) : base("Who are you? Let us know", app)
         {
         }
 
@@ -26,13 +26,13 @@ namespace BWMS.UITest.PageModel.Pages.CustomerManagement
         public CustomerManagementPage Submit()
         {
             WebDriver.FindElement(By.Id("SubmitButton")).Click();
-            return new CustomerManagementPage(BWMS);
+            return new CustomerManagementPage(App);
         }
 
         public CustomerManagementPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new CustomerManagementPage(BWMS);
+            return new CustomerManagementPage(App);
         }
     }
 }

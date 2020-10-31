@@ -20,12 +20,13 @@ namespace BWMS.UITest
         {
             // arrange
             string testrunId = Guid.NewGuid().ToString("N");
-            App app = new App(testrunId, TestConstants.BWMSStartUrl);
-            var homePage = BWMS.Start();
-            string Name = TestDataGenerators.GenerateRandomName();
+            App app = new App(testrunId, TestConstants.PitstopStartUrl);
+            var homePage = app.Start();
+            //string Name = TestDataGenerators.GenerateRandomName();
+            string Name = "";
 
             // act
-            BWMS.Menu
+            app.Menu
                 .CustomerManagement()
                 .RegisterCustomer()
                 .Cancel()
@@ -37,7 +38,7 @@ namespace BWMS.UITest
                 .SelectCustomer($"TestCustomer {testrunId}")
                 .Back();
 
-            BWMS.Menu
+            app.Menu
                 .VehicleManagement()
                 .RegisterVehicle()
                 .Cancel()
@@ -47,7 +48,7 @@ namespace BWMS.UITest
                 .SelectVehicle(Name)
                 .Back(); 
 
-            BWMS.Menu
+            app.Menu
                 .WorkshopManagement()
                 .RegisterMaintenanceJob()
                 .Cancel()
@@ -57,7 +58,7 @@ namespace BWMS.UITest
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .Back(); 
 
-            BWMS.Menu
+            app.Menu
                 .WorkshopManagement()
                 .SelectMaintenanceJob($"Job {testrunId}")
                 .GetJobStatus(out string beforeJobStatus)
@@ -72,7 +73,7 @@ namespace BWMS.UITest
             Assert.Equal("Completed", afterJobStatus);
 
             // cleanup
-            BWMS.Stop();
+            app.Stop();
         }
     }
 }

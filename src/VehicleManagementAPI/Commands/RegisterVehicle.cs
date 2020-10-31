@@ -12,10 +12,10 @@ namespace BWMS.Application.VehicleManagement.Commands
         public readonly string Type;
         public readonly string OwnerId;
 
-        public RegisterVehicle(Guid messageId, string Name, string brand, string type, string ownerId) : 
+        public RegisterVehicle(Guid messageId, string name, string brand, string type, string ownerId) : 
             base(messageId)
         {
-            Name = Name;
+            Name = name;
             Brand = brand;
             Type = type;
             OwnerId = ownerId;

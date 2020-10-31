@@ -25,13 +25,13 @@ namespace BWMS.UITest.PageModel.Pages.VehicleManagement
         public VehicleManagementPage Submit()
         {
             WebDriver.FindElement(By.Id("SubmitButton")).Click();
-            return new VehicleManagementPage(app);
+            return new VehicleManagementPage(App);
         }
 
         public VehicleManagementPage Cancel()
         {
             WebDriver.FindElement(By.Id("CancelButton")).Click();
-            return new VehicleManagementPage(app);
+            return new VehicleManagementPage(App);
         }
     }
 }

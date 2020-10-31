@@ -14,7 +14,7 @@ namespace BWMS.UITest.PageModel.Pages.CustomerManagement
         public RegisterCustomerPage RegisterCustomer()
         {
             WebDriver.FindElement(By.Id("RegisterCustomerButton")).Click();
-            return new RegisterCustomerPage(BWMS);
+            return new RegisterCustomerPage(App);
         }
 
         public CustomerDetailsPage SelectCustomer(string customerName)
@@ -22,7 +22,7 @@ namespace BWMS.UITest.PageModel.Pages.CustomerManagement
             WebDriver
                 .FindElement(By.XPath($"//td[contains(text(),'{customerName}')]"))
                 .Click();
-            return new CustomerDetailsPage(BWMS); 
+            return new CustomerDetailsPage(App); 
         }
     }
 }
